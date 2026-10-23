@@ -1,0 +1,81 @@
+@{
+    ViewData["Title"] = "Corporate Law and Advisory | Sonagra & Company";
+    ViewData["Description"] = "Corporate law and advisory support from Sonagra & Company for businesses, promoters and management teams.";
+
+    var relatedServices = new[]
+    {
+        ("Formation of Business Entities", "/our-services/formation-of-business-entities/"),
+        ("Company Law and LLP Compliances", "/our-services/company-law-llp-compliances/"),
+        ("SEBI Matters and IPO Services", "/our-services/sebi-matters-and-ipo-services/"),
+        ("FEMA Matters", "/our-services/fema-matters/"),
+        ("Intellectual Property Rights - Trademark", "/our-services/intellectual-property-rights-trademark-tm/"),
+        ("Amalgamation, Merger, De-merger and Takeover", "/our-services/amalgamation-merger-de-merger-takeover/"),
+        ("RBI and NBFC Related Compliances", "/Home/Index#services"),
+        ("Transactional Due Diligence Services", "/Home/Index#services"),
+        ("Corporate Governance Services", "/Home/Index#services"),
+        ("NCLT Services", "/Home/Index#services"),
+        ("Agreements and Petitions", "/Home/Index#services"),
+        ("Liquidation under Insolvency and Bankruptcy Code", "/Home/Index#services"),
+        ("Legal Metrology Act", "/Home/Index#services"),
+        ("XBRL Filing", "/Home/Index#services"),
+        ("Other Services", "/Home/Index#services")
+    };
+}
+
+<section class="service-detail-hero">
+    <div class="container site-container">
+        <span class="eyebrow">Our Services</span>
+        <h1>Corporate Law<br />and Advisory</h1>
+        <p>Clear guidance for responsible corporate decisions and sustainable business growth.</p>
+    </div>
+</section>
+
+<section class="service-detail-section section-space">
+    <div class="container site-container">
+        <div class="row gy-5">
+            <div class="col-lg-8">
+                <span class="eyebrow eyebrow-dark">Corporate Law and Advisory</span>
+                <h2 class="section-title">Practical advice for your corporate requirements</h2>
+                <p class="lead-copy">Sonagra &amp; Company provides structured corporate law and advisory support to businesses, promoters and management teams.</p>
+                <p>Our team helps clients understand corporate requirements, assess available options and take informed decisions. We focus on practical, clear and dependable advice aligned with each organisation’s business objectives.</p>
+                <p>Whether you are establishing a new business, managing ongoing corporate responsibilities or considering a strategic transaction, we help bring clarity to complex legal and governance matters.</p>
+
+                <div class="service-detail-points">
+                    <h3>Our support includes</h3>
+                    <div class="service-detail-list">
+                        <article><span>01</span><div><h3>Strategic Advisory to the Board</h3><p>Advice to promoters, directors and senior management on corporate structuring, governance frameworks, succession planning and regulatory strategy to support sustainable growth and informed decision-making.</p></div></article>
+                        <article><span>02</span><div><h3>Corporate Governance Advisory</h3><p>Support to strengthen governance through advice on board composition, committee functioning, policy formulation and implementation of practices aligned with the Companies Act and applicable SEBI requirements.</p></div></article>
+                        <article><span>03</span><div><h3>Business Restructuring and Regulatory Strategy</h3><p>Guidance for mergers, demergers, shareholding changes and capital reorganisations from legal and strategic perspectives, with attention to regulatory compliance.</p></div></article>
+                        <article><span>04</span><div><h3>Independent Director or Board Advisor</h3><p>Objective board-level oversight and risk-based insights to support governance accountability, constructive challenge and responsible decision-making.</p></div></article>
+                        <article><span>05</span><div><h3>Policy Drafting and Implementation</h3><p>Drafting and implementation support for codes of conduct, whistleblower policies, related-party transaction frameworks and insider-trading policies.</p></div></article>
+                        <article><span>06</span><div><h3>Legal and Regulatory Risk Management</h3><p>Identification of compliance gaps, assessment of regulatory risks and practical mitigation strategies to help businesses reduce exposure and protect their reputation.</p></div></article>
+                        <article><span>07</span><div><h3>Stakeholder and Investor Communications</h3><p>Guidance on communication with shareholders, regulators and other stakeholders, including timely and appropriate disclosure of material information.</p></div></article>
+                        <article><span>08</span><div><h3>Corporate Social Responsibility Advisory</h3><p>Support for CSR policy implementation, project selection and statutory reporting aligned with the organisation’s objectives and applicable obligations.</p></div></article>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <aside class="service-detail-sidebar">
+                    <h2>Our Services</h2>
+                    @foreach (var service in relatedServices)
+                    {
+                        <a href="@service.Item2">@service.Item1 <span>↗</span></a>
+                    }
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail-cta section-space-sm">
+    <div class="container site-container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+                <span class="eyebrow">Corporate expertise. Strategic growth.</span>
+                <h2>Discuss your corporate requirement with us</h2>
+                <p>Get practical support for your next corporate law or advisory decision.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"><a class="btn btn-gold" href="/Home/Contact">Contact Sonagra <span>↗</span></a></div>
+        </div>
+    </div>
+</section>

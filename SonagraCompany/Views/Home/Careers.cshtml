@@ -1,0 +1,131 @@
+@{
+    ViewData["Title"] = "Careers | Sonagra & Company";
+    ViewData["Description"] = "Explore career opportunities with Sonagra & Company in corporate secretarial, legal, tax and design roles.";
+
+    var roles = new[]
+    {
+        new
+        {
+            Title = "Company Secretary (CS)",
+            Qualifications = new[] { "Qualified CS (ICSI)", "0–5+ Years Experience", "Knowledge of Corporate Laws" },
+            Key = "Company Secretary"
+        },
+        new
+        {
+            Title = "CS Intern",
+            Qualifications = new[] { "CS Executive Qualified", "Professional Programme Pursuing", "Eagerness to Learn" },
+            Key = "CS Intern"
+        },
+        new
+        {
+            Title = "Legal Associate / Lawyer",
+            Qualifications = new[] { "LL.B.", "Bar Council Enrolment", "Excellent Drafting & Research" },
+            Key = "Legal Associate or Lawyer"
+        },
+        new
+        {
+            Title = "Chartered Accountant (CA)",
+            Qualifications = new[] { "Qualified CA", "0–5+ Years Experience", "Knowledge of Direct and Indirect Tax Laws", "Knowledge of Financial Management" },
+            Key = "Chartered Accountant"
+        },
+        new
+        {
+            Title = "Designer",
+            Qualifications = new[] { "Graphic and presentation design skills", "0–5+ Years Experience", "Proficient with presentation and design tools", "Photo and video editing knowledge" },
+            Key = "Designer"
+        },
+        new
+        {
+            Title = "Office Executive / General Staff",
+            Qualifications = new[] { "Graduate in any discipline", "Good communication and organisational skills", "Basic computer knowledge", "Eagerness to learn and support office operations" },
+            Key = "Office Executive / General Staff"
+        }
+    };
+}
+
+<section class="careers-page-hero">
+    <div class="container site-container">
+        <span class="eyebrow">Work with Sonagra &amp; Company</span>
+        <h1>Careers</h1>
+        <p>Build your professional journey with a team focused on corporate excellence and responsible growth.</p>
+    </div>
+</section>
+
+<section class="section-space careers-intro">
+    <div class="container site-container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-5">
+                <span class="eyebrow eyebrow-dark">Join our team</span>
+                <h2 class="section-title">Grow with meaningful professional work</h2>
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+                <p class="lead-copy">We welcome motivated professionals who value learning, integrity and high-quality client support.</p>
+                <p>At Sonagra &amp; Company, you will work on practical corporate, legal, compliance and advisory assignments while developing your skills in a collaborative professional environment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="careers-roles-section section-space-sm">
+    <div class="container site-container">
+        <div class="text-center careers-section-heading">
+            <span class="eyebrow eyebrow-dark">Current opportunities</span>
+            <h2 class="section-title">Find your next opportunity</h2>
+        </div>
+        <div class="careers-role-grid">
+            @foreach (var role in roles)
+            {
+                <article class="career-role-card">
+                    <div class="career-role-heading"><span class="career-role-number">@((Array.IndexOf(roles, role) + 1).ToString("00"))</span><h2>@role.Title</h2></div>
+                    <h3>Qualifications:</h3>
+                    <ul>
+                        @foreach (var qualification in role.Qualifications)
+                        {
+                            <li>@qualification</li>
+                        }
+                    </ul>
+                    <button class="career-apply-link" type="button" data-bs-toggle="modal" data-bs-target="#careerApplicationModal" data-career-role="@role.Key">Apply Now <span>↗</span></button>
+                </article>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="careers-cta section-space-sm">
+    <div class="container site-container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+                <span class="eyebrow">Your next step</span>
+                <h2>Do not see the right role?</h2>
+                <p>Share your profile with us and let us know how you can contribute to Sonagra &amp; Company.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"><button class="btn btn-gold" type="button" data-bs-toggle="modal" data-bs-target="#careerApplicationModal" data-career-role="General Application">Send your profile <span>↗</span></button></div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade career-application-modal" id="careerApplicationModal" tabindex="-1" aria-labelledby="careerApplicationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="careerApplicationModalLabel">Apply to Sonagra &amp; Company</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="careerApplicationForm">
+                @Html.AntiForgeryToken()
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-md-6"><label for="careerName">Your Name</label><input id="careerName" name="name" type="text" required /></div>
+                        <div class="col-md-6"><label for="careerEmail">Email</label><input id="careerEmail" name="email" type="email" required /></div>
+                        <div class="col-md-6"><label for="careerPhone">Phone Number</label><input id="careerPhone" name="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10" title="Enter exactly 10 digits" required /></div>
+                        <div class="col-md-6"><label for="careerRole">Role Name</label><input id="careerRole" name="role" type="text" readonly required /></div>
+                        <div class="col-12"><label for="careerMessage">Message</label><textarea id="careerMessage" name="message" rows="4"></textarea></div>
+                        <div class="col-12"><label for="careerResume">Resume / CV</label><input id="careerResume" name="resume" type="file" accept=".pdf,.doc,.docx" /></div>
+                    </div>
+                    <p class="career-form-status" id="careerFormStatus" role="status" aria-live="polite"></p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-gold career-submit-button" type="submit">Submit</button></div>
+            </form>
+        </div>
+    </div>
+</div>

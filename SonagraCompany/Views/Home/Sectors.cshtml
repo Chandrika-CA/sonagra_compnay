@@ -1,0 +1,79 @@
+@{
+    ViewData["Title"] = "Sectors We Serve | Sonagra & Company";
+    ViewData["Description"] = "Explore the sectors supported by Sonagra & Company through practical corporate governance, compliance and business advisory services.";
+    var sectors = new[]
+    {
+        "Agriculture and Forestry",
+        "Banking and Financial Services",
+        "Capital Markets and Securities",
+        "Construction and Engineering",
+        "Education",
+        "Energy, Power and Hydrocarbons",
+        "Investment Funds and Asset Management",
+        "Life Sciences, Healthcare and Pharma",
+        "Ceramic and Vitrified Industry",
+        "Mines and Minerals",
+        "Real Estate",
+        "Information Technology",
+        "Transportation and Logistics",
+        "Urban Infrastructure, Smart Cities and Public Procurement",
+        "Chemical Manufacturing and Processing Industry",
+        "Jewellery Manufacturing and Retail Ecosystem",
+        "Foreign Exchange and Financial Service Providers",
+        "Engineering and Heavy Machinery Companies",
+        "International Trade Businesses",
+        "Automobiles Sector",
+        "Wood and Laminates",
+        "Paper Industry",
+        "Textile and Spinning Industry"
+    };
+}
+
+<section class="sectors-page-hero">
+    <div class="container site-container">
+        <span class="eyebrow">Industries we support</span>
+        <h1>Sectors</h1>
+        <p>Practical corporate and compliance support for businesses across industries.</p>
+    </div>
+</section>
+
+<section class="section-space sectors-intro">
+    <div class="container site-container">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-5">
+                <span class="eyebrow eyebrow-dark">Sector experience</span>
+                <h2 class="section-title">Advice shaped around your industry</h2>
+            </div>
+            <div class="col-lg-6 offset-lg-1">
+                <p class="lead-copy">Every sector has its own regulatory environment, commercial pressures and growth opportunities.</p>
+                <p>Sonagra &amp; Company works with businesses and management teams across a broad range of industries, providing structured support for governance, compliance, transactions and important corporate decisions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectors-grid-section section-space-sm">
+    <div class="container site-container">
+        <div class="sectors-grid">
+            @for (var i = 0; i < sectors.Length; i++)
+            {
+                <article class="sector-card">
+                    <div class="sector-card-content"><span>@((i + 1).ToString("00"))</span><h2>@sectors[i]</h2></div>
+                </article>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="sectors-cta section-space-sm">
+    <div class="container site-container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+                <span class="eyebrow">Corporate expertise. Strategic growth.</span>
+                <h2>Discuss your industry-specific requirement with us</h2>
+                <p>Let us understand your business and identify the right corporate or compliance support.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"><a class="btn btn-gold" href="/Home/Contact">Contact Sonagra <span>↗</span></a></div>
+        </div>
+    </div>
+</section>

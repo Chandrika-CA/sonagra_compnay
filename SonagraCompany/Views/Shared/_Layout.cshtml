@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sonagra &amp; Company</title>
+    <meta name="description" content="@(ViewData["Description"] ?? "Sonagra & Company provides company law compliance, ROC filing, corporate governance and advisory services in Morbi, Gujarat.")" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SonagraCompany.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="topbar">
+            <div class="container site-container topbar-inner">
+                <span>Strategic advice for responsible growth</span>
+                <div class="topbar-contact">
+                    <a href="mailto:cs@sonagra.com">cs@sonagra.com</a>
+                    <span class="topbar-divider"></span>
+                    <a href="tel:+917567096966">Mobile: +91 75670 96966</a>
+                    <a href="tel:+917567096967">Office: +91 75670 96967</a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg main-nav" aria-label="Main navigation">
+            <div class="container site-container">
+                <a class="brand" asp-area="" asp-controller="Home" asp-action="Index" aria-label="Sonagra and Company home">
+                    <img class="brand-logo" src="~/images/sonagra-logo.png" alt="Sonagra &amp; Company" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavigation">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link active" href="/#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Home/About">About Us</a></li>
+                        <li class="nav-item services-nav-item">
+                            <a class="nav-link services-toggle" href="/#services" aria-expanded="false" aria-haspopup="true" aria-controls="servicesMegaMenu">Services <span class="nav-chevron" aria-hidden="true">⌄</span></a>
+                            <div id="servicesMegaMenu" class="services-mega-menu" role="menu" aria-label="Services navigation">
+                                <div class="container site-container">
+                                    <div class="services-menu-grid">
+                                        <div class="services-menu-column">
+                                            <h3>Business Setup</h3>
+                                            <a role="menuitem" href="/#services">Company formation</a>
+                                            <a role="menuitem" href="/#services">LLP formation</a>
+                                            <a role="menuitem" href="/#services">Startup advisory</a>
+                                            <a role="menuitem" href="/#services">Business structuring</a>
+                                        </div>
+                                        <div class="services-menu-column">
+                                            <h3>Compliance</h3>
+                                            <a role="menuitem" href="/#services">Company law compliance</a>
+                                            <a role="menuitem" href="/#services">ROC filings</a>
+                                            <a role="menuitem" href="/#services">LLP compliance</a>
+                                            <a role="menuitem" href="/#services">Due diligence</a>
+                                        </div>
+                                        <div class="services-menu-column">
+                                            <h3>Advisory</h3>
+                                            <a role="menuitem" href="/#services">Corporate governance</a>
+                                            <a role="menuitem" href="/#services">Corporate law advisory</a>
+                                            <a role="menuitem" href="/#services">Board advisory</a>
+                                            <a role="menuitem" href="/#services">Transaction advisory</a>
+                                        </div>
+                                        <div class="services-menu-column">
+                                            <h3>Regulatory Matters</h3>
+                                            <a role="menuitem" href="/#services">SEBI compliance</a>
+                                            <a role="menuitem" href="/#services">FEMA &amp; FDI advisory</a>
+                                            <a role="menuitem" href="/#services">Capital markets</a>
+                                            <a role="menuitem" href="/#services">Restructuring support</a>
+                                        </div>
+                                    </div>
+                                    <div class="services-menu-footer"><span>Professional support for important business decisions.</span><a href="/#services">View all services <span aria-hidden="true">↗</span></a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/Home/Sectors">Sectors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Home/Team">Our Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Home/Careers">Careers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Home/Blogs">Blogs</a></li>
+                        <li class="nav-item nav-contact-item"><a class="nav-link nav-contact-link" href="/Home/Contact">Contact Us <span aria-hidden="true">↗</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+            @RenderBody()
+    </main>
+    <footer class="site-footer">
+        <div class="container site-container">
+            <div class="footer-main row gy-5">
+                <div class="col-lg-4">
+                    <a class="brand footer-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img class="brand-logo" src="~/images/sonagra-logo.png" alt="Sonagra &amp; Company" />
+                    </a>
+                    <p class="footer-intro">Thoughtful company law, compliance and corporate advisory support from Morbi, Gujarat.</p>
+                    <p class="footer-address">326, 3rd Floor, Star Arcade<br />Sanala Road, Morbi - 363641<br />Gujarat, India</p>
+                    <a href="tel:+917567096966">Mobile: +91 75670 96966</a>
+                    <a href="mailto:cs@sonagra.com">cs@sonagra.com</a>
+                </div>
+                <div class="col-lg-3"><h3>Our Services</h3><a href="/our-services/corporate-law-and-advisory/">Corporate Law and Advisory</a><a href="/our-services/sebi-matters-and-ipo-services/">SEBI Matters and IPO Services</a><a href="/our-services/fema-matters/">FEMA Matters</a><a href="/our-services/amalgamation-merger-de-merger-takeover/">Amalgamation, Merger, De-merger &amp; Takeover</a><a href="https://hsmehta.com/our-services/corporate-governance-services/" target="_blank" rel="noopener noreferrer">Corporate Governance Services</a><a href="https://hsmehta.com/our-services/rbi-and-nbfc-related-compliances/" target="_blank" rel="noopener noreferrer">RBI and NBFC Related Compliances</a><a href="/our-services/intellectual-property-rights-trademark-tm/">Intellectual Property Rights – Trademark (TM)</a><a href="https://hsmehta.com/our-services/other-services/" target="_blank" rel="noopener noreferrer">Other Services</a></div>
+                <div class="col-lg-2"><h3>Useful Links</h3><a href="https://www.mca.gov.in/content/mca/global/en/home.html" target="_blank" rel="noopener noreferrer">MCA</a><a href="https://www.sebi.gov.in/" target="_blank" rel="noopener noreferrer">SEBI</a><a href="https://ipindia.gov.in/" target="_blank" rel="noopener noreferrer">IPR</a><a href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener noreferrer">Income Tax</a><a href="https://www.gst.gov.in/" target="_blank" rel="noopener noreferrer">GST</a><a href="https://nclt.gov.in/" target="_blank" rel="noopener noreferrer">NCLT</a><a href="https://ibbi.gov.in//en/legal-framework/act" target="_blank" rel="noopener noreferrer">IBBI</a></div>
+                <div class="col-lg-3"><h3>Location</h3><div class="footer-map-frame"><iframe title="Sonagra and Company location in Morbi" src="https://www.google.com/maps?q=326%203rd%20Floor%20Star%20Arcade%20Sanala%20Road%20Morbi%20Gujarat%20363641&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><a class="map-link" href="https://maps.app.goo.gl/jbeTXLArzdvhij428" target="_blank" rel="noopener noreferrer">Open primary location in Maps ↗</a><a class="map-link" href="https://maps.app.goo.gl/CXhEhev962HLuWV58" target="_blank" rel="noopener noreferrer">Open second location in Maps ↗</a></div>
+            </div>
+            <div class="footer-bottom"><span>&copy; @DateTime.Now.Year Sonagra &amp; Company. All rights reserved.</span><a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy policy</a></div>
+        </div>
+    </footer>
+    <a class="whatsapp-float" href="https://wa.me/917567096966?text=Hello%20Sonagra%20%26%20Company%2C%20I%20would%20like%20to%20discuss%20a%20corporate%20requirement." target="_blank" rel="noopener noreferrer" aria-label="Chat with Sonagra &amp; Company on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.08 0C5.56 0 .25 5.3.25 11.83c0 2.08.54 4.1 1.57 5.88L.15 24l6.43-1.64a11.86 11.86 0 0 0 5.5 1.4h.01c6.52 0 11.83-5.3 11.83-11.83 0-3.16-1.23-6.13-3.4-8.45ZM12.09 21.7h-.01a9.84 9.84 0 0 1-5.02-1.37l-.36-.21-3.82.98 1.02-3.72-.23-.38a9.84 9.84 0 0 1-1.51-5.17C2.16 6.4 6.61 1.95 12.08 1.95c2.65 0 5.14 1.03 7.01 2.9a9.84 9.84 0 0 1 2.91 7.02c0 5.47-4.45 9.92-9.91 9.92Zm5.44-7.43c-.3-.15-1.78-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.94 1.18-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.51-1.78-1.69-2.08-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.27-.2-.57-.35Z" /></svg>
+        <span>WhatsApp</span>
+    </a>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
