@@ -1,0 +1,84 @@
+@{
+    ViewData["Title"] = "XBRL Filing | Sonagra & Company";
+    ViewData["Description"] = "XBRL filing services for data preparation, conversion, validation and filing support.";
+
+    var relatedServices = new[]
+    {
+        ("Formation of Business Entities", "/our-services/formation-of-business-entities/"),
+        ("Company Law and LLP Compliances", "/our-services/company-law-llp-compliances/"),
+        ("SEBI Matters and IPO Services", "/our-services/sebi-matters-and-ipo-services/"),
+        ("FEMA Matters", "/our-services/fema-matters/"),
+        ("Intellectual Property Rights - Trademark", "/our-services/intellectual-property-rights-trademark-tm/"),
+        ("Amalgamation, Merger, De-merger and Takeover", "/our-services/amalgamation-merger-de-merger-takeover/"),
+        ("RBI and NBFC Related Compliances", "/our-services/rbi-and-nbfc-related-compliances/"),
+        ("Transactional Due Diligence Services", "/our-services/transactional-due-diligence-services/"),
+        ("Corporate Governance Services", "/our-services/corporate-governance-services/"),
+        ("NCLT Services", "/our-services/nclt-services/"),
+        ("Corporate Law and Advisory", "/our-services/corporate-law-and-advisory/"),
+        ("Agreements and Petitions", "/our-services/agreements-petitions/"),
+        ("Liquidation under Insolvency and Bankruptcy Code", "/our-services/liquidation-under-insolvency-and-bankruptcy-code-2016/"),
+        ("Legal Metrology Act", "/our-services/legal-metrology-act-2009/"),
+        ("XBRL Filing", "/our-services/xbrl-filing/"),
+        ("Other Services", "/our-services/other-services/")
+    };
+}
+
+<section class="service-detail-hero">
+    <div class="container site-container">
+        <span class="eyebrow">Our Services</span>
+        <h1>XBRL Filing</h1>
+        <p>Professional support for accurate, compliant and timely XBRL conversion, validation and filing.</p>
+    </div>
+</section>
+
+<section class="service-detail-section section-space">
+    <div class="container site-container">
+        <div class="row gy-5">
+            <div class="col-lg-8">
+                <span class="eyebrow eyebrow-dark">XBRL Filing</span>
+                <h2 class="section-title">Practical support for end-to-end XBRL filing</h2>
+                <p class="lead-copy">We assist with structured preparation and filing of XBRL-compliant financial information to help organizations meet statutory reporting requirements.</p>
+                <p>Our approach focuses on data accuracy, proper taxonomy mapping, pre-scrutiny checks and coordinated filing workflows to reduce compliance risk.</p>
+
+                <div class="service-detail-points">
+                    <h3>Our support includes</h3>
+                    <div class="service-detail-list">
+                        <article><span>01</span><div><h3>Data Input</h3><p>Collection, organization and preparation of relevant financial and reporting information required for XBRL processing.</p></div></article>
+                        <article><span>02</span><div><h3>Conversion of Financial Data into XBRL Format</h3><p>Structured conversion and mapping of financial statements and disclosures into applicable XBRL taxonomy format.</p></div></article>
+                        <article><span>03</span><div><h3>Validation and Pre-scrutiny</h3><p>Validation checks and pre-scrutiny support to identify data inconsistencies or taxonomy issues before submission.</p></div></article>
+                        <article><span>04</span><div><h3>Certification and Filing</h3><p>Assistance in final certification workflow and submission process with procedural compliance support.</p></div></article>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <aside class="service-detail-sidebar">
+                    <h2>Our Services</h2>
+                    @foreach (var service in relatedServices)
+                    {
+                        if (service.Item1 == "XBRL Filing")
+                        {
+                            <a class="active" href="@service.Item2">@service.Item1</a>
+                        }
+                        else
+                        {
+                            <a href="@service.Item2">@service.Item1 <span>↗</span></a>
+                        }
+                    }
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail-cta section-space-sm">
+    <div class="container site-container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+                <span class="eyebrow">Data accuracy. Filing confidence.</span>
+                <h2>Discuss your XBRL filing requirement with us</h2>
+                <p>Get practical support for conversion, validation and compliant filing workflows.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"><a class="btn btn-gold" href="/Home/Contact">Contact Sonagra <span>↗</span></a></div>
+        </div>
+    </div>
+</section>

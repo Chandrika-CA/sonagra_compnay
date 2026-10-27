@@ -1,23 +1,48 @@
 @{
     ViewData["Title"] = "SEBI Matters and IPO Services | Sonagra & Company";
+    ViewData["Description"] = "SEBI and IPO support for listed entities, capital-market transactions, disclosures, certifications and continuing compliance.";
+
+    var relatedServices = new[]
+    {
+        ("Formation of Business Entities", "/our-services/formation-of-business-entities/"),
+        ("Company Law & LLP Compliances", "/our-services/company-law-llp-compliances/"),
+        ("SEBI Matters and IPO Services", "/our-services/sebi-matters-and-ipo-services/"),
+        ("FEMA Matters", "/our-services/fema-matters/"),
+        ("Intellectual Property Rights - Trademark", "/our-services/intellectual-property-rights-trademark-tm/"),
+        ("Amalgamation, Merger, De-merger and Takeover", "/our-services/amalgamation-merger-de-merger-takeover/"),
+        ("RBI and NBFC Related Compliances", "/our-services/rbi-and-nbfc-related-compliances/"),
+        ("Transactional Due Diligence Services", "/our-services/transactional-due-diligence-services/"),
+        ("Corporate Governance Services", "/our-services/corporate-governance-services/"),
+        ("Corporate Law and Advisory", "/our-services/corporate-law-and-advisory/"),
+        ("Liquidation Under Insolvency and Bankruptcy Code 2016", "/our-services/liquidation-under-insolvency-and-bankruptcy-code-2016/"),
+        ("NCLT Services", "/our-services/nclt-services/"),
+        ("Legal Metrology Act, 2009", "/our-services/legal-metrology-act-2009/"),
+        ("XBRL Filing", "/our-services/xbrl-filing/"),
+        ("Agreements & Petitions", "/our-services/agreements-petitions/"),
+        ("Other Services", "/our-services/other-services/")
+    };
 }
 
 <section class="service-detail-hero" style="background-image: linear-gradient(90deg, rgba(5, 18, 37, .88), rgba(5, 18, 37, .48)), url('@Url.Content("~/images/SEBI_Matters_and_IPO_Services.png")');">
-    <div class="container">
-        <span class="service-detail-eyebrow">Capital Markets &amp; Securities Compliance</span>
+    <div class="container site-container">
+        <span class="eyebrow">Capital Markets &amp; Securities Compliance</span>
         <h1>SEBI Matters and IPO Services</h1>
         <p>Practical support for listed companies, issuers, promoters, investors and regulated intermediaries across SEBI regulations and capital-market transactions.</p>
     </div>
 </section>
 
-<section class="service-detail-section py-5">
-    <div class="container">
-        <div class="row g-5">
+<section class="service-detail-section section-space">
+    <div class="container site-container">
+        <div class="row gy-5">
             <div class="col-lg-8">
-                <p class="lead">Sonagra &amp; Company assists businesses with securities-law compliance, public and private capital raising, listing obligations, issue documentation and continuing regulatory requirements.</p>
+                <span class="eyebrow eyebrow-dark">SEBI Matters and IPO Services</span>
+                <h2 class="section-title">Our Services</h2>
+                <p class="lead-copy">Sonagra &amp; Company assists businesses with securities-law compliance, public and private capital raising, listing obligations, issue documentation and continuing regulatory requirements.</p>
                 <p>Our work is designed to bring together corporate-law, stock-exchange and SEBI requirements so that every approval, disclosure, certification and post-issue obligation is handled in a timely and well-documented manner.</p>
 
-                <div class="service-detail-list sebi-service-detail-list">
+                <div class="service-detail-points">
+                    <h3>SEBI Matters and IPO Services</h3>
+                    <div class="service-detail-list sebi-service-detail-list">
                     <article>
                         <h2>1. SEBI LODR Regulations, 2015</h2>
                         <ul class="service-detail-points">
@@ -153,38 +178,39 @@
                             <li>Ongoing compliance, periodic reporting and regulatory documentation.</li>
                         </ul>
                     </article>
+                    </div>
                 </div>
             </div>
 
             <aside class="col-lg-4">
                 <div class="service-detail-sidebar">
                     <h2>Our Services</h2>
-                    <a href="/our-services/formation-of-business-entities/">Formation of Business Entities</a>
-                    <a href="/our-services/company-law-llp-compliances/">Company Law &amp; LLP Compliances</a>
-                    <a class="active" href="/our-services/sebi-matters-and-ipo-services/">SEBI Matters and IPO Services</a>
-                    <a href="/our-services/fema-matters/">FEMA Matters</a>
-                    <a href="/our-services/intellectual-property-rights-trademark-tm/">Intellectual Property Rights - Trademark (TM)</a>
-                    <a href="/our-services/amalgamation-merger-de-merger-takeover/">Amalgamation, Merger, De-merger &amp; Takeover</a>
-                    <a href="/Home/Index#services">RBI and NBFC Related Compliances</a>
-                    <a href="/Home/Index#services">Transactional Due Diligence Services</a>
-                    <a href="/Home/Index#services">Corporate Governance Services</a>
-                    <a href="/our-services/corporate-law-and-advisory/">Corporate Law and Advisory</a>
-                    <a href="/Home/Index#services">Liquidation Under Insolvency and Bankruptcy Code 2016</a>
-                    <a href="/Home/Index#services">NCLT Services</a>
-                    <a href="/Home/Index#services">Legal Metrology Act, 2009</a>
-                    <a href="/Home/Index#services">XBRL Filing</a>
-                    <a href="/Home/Index#services">Agreements &amp; Petitions</a>
-                    <a href="/Home/Index#services">Other Services</a>
+                    @foreach (var service in relatedServices)
+                    {
+                        if (service.Item1 == "SEBI Matters and IPO Services")
+                        {
+                            <a class="active" href="@service.Item2">@service.Item1</a>
+                        }
+                        else
+                        {
+                            <a href="@service.Item2">@service.Item1 <span>↗</span></a>
+                        }
+                    }
                 </div>
             </aside>
         </div>
     </div>
 </section>
 
-<section class="service-detail-cta py-5">
-    <div class="container text-center">
-        <h2>Need support with a SEBI or capital-market matter?</h2>
-        <p>Speak with Sonagra &amp; Company for structured, practical and compliance-focused assistance.</p>
-        <a class="btn btn-primary" href="/Home/Contact">Get in touch</a>
+<section class="service-detail-cta section-space-sm">
+    <div class="container site-container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+                <span class="eyebrow">Capital markets. Compliance clarity.</span>
+                <h2>Need support with a SEBI or capital-market matter?</h2>
+                <p>Speak with Sonagra &amp; Company for structured, practical and compliance-focused assistance.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"><a class="btn btn-gold" href="/Home/Contact">Get in touch <span>↗</span></a></div>
+        </div>
     </div>
 </section>

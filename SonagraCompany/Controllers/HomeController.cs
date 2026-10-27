@@ -88,6 +88,78 @@ namespace SonagraCompany.Controllers
             return View();
         }
 
+        [Route("our-services/rbi-and-nbfc-related-compliances")]
+        public IActionResult RbiAndNbfcRelatedCompliances()
+        {
+            ViewData["Title"] = "RBI and NBFC Related Compliances | Sonagra & Company";
+            ViewData["Description"] = "RBI and NBFC compliance support, regulatory filings and advisory services from Sonagra & Company.";
+            return View();
+        }
+
+        [Route("our-services/transactional-due-diligence-services")]
+        public IActionResult TransactionalDueDiligenceServices()
+        {
+            ViewData["Title"] = "Transactional Due Diligence Services | Sonagra & Company";
+            ViewData["Description"] = "Transactional due diligence, compliance verification and secretarial certification support from Sonagra & Company.";
+            return View();
+        }
+
+        [Route("our-services/corporate-governance-services")]
+        public IActionResult CorporateGovernanceServices()
+        {
+            ViewData["Title"] = "Corporate Governance Services | Sonagra & Company";
+            ViewData["Description"] = "Corporate governance advisory, board and committee support, policy framework development and compliance review services from Sonagra & Company.";
+            return View();
+        }
+
+        [Route("our-services/nclt-services")]
+        public IActionResult NcltServices()
+        {
+            ViewData["Title"] = "NCLT Services | Sonagra & Company";
+            ViewData["Description"] = "NCLT petition filing and company law tribunal support for restructuring, restoration, oppression and mismanagement matters.";
+            return View();
+        }
+
+        [Route("our-services/agreements-petitions")]
+        public IActionResult AgreementsPetitions()
+        {
+            ViewData["Title"] = "Agreements and Petitions | Sonagra & Company";
+            ViewData["Description"] = "Agreements and petitions advisory content based on corporate law and advisory service requirements.";
+            return View();
+        }
+
+        [Route("our-services/liquidation-under-insolvency-and-bankruptcy-code-2016")]
+        public IActionResult LiquidationUnderInsolvencyAndBankruptcyCode2016()
+        {
+            ViewData["Title"] = "Liquidation Under Insolvency and Bankruptcy Code 2016 | Sonagra & Company";
+            ViewData["Description"] = "Liquidation process advisory support under IBC 2016 including compliance, documentation, filings and stakeholder coordination.";
+            return View();
+        }
+
+        [Route("our-services/legal-metrology-act-2009")]
+        public IActionResult LegalMetrologyAct2009()
+        {
+            ViewData["Title"] = "Legal Metrology Act, 2009 | Sonagra & Company";
+            ViewData["Description"] = "Legal Metrology Act compliance, registration, documentation, reporting and regulatory liaison support.";
+            return View();
+        }
+
+        [Route("our-services/xbrl-filing")]
+        public IActionResult XbrlFiling()
+        {
+            ViewData["Title"] = "XBRL Filing | Sonagra & Company";
+            ViewData["Description"] = "XBRL filing support including data input, conversion, validation, pre-scrutiny, certification and filing.";
+            return View();
+        }
+
+        [Route("our-services/other-services")]
+        public IActionResult OtherServices()
+        {
+            ViewData["Title"] = "Other Services | Sonagra & Company";
+            ViewData["Description"] = "Other corporate support services including MSME registration, ISIN liaison, PAN/TAN, LEI, valuation and DSC renewals.";
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult ValidateCareerApplication([FromForm] CareerApplicationRequest application)

@@ -1,0 +1,87 @@
+@{
+    ViewData["Title"] = "Legal Metrology Act, 2009 | Sonagra & Company";
+    ViewData["Description"] = "Legal Metrology Act compliance support for registration, labeling, returns, audits and authority liaison.";
+
+    var relatedServices = new[]
+    {
+        ("Formation of Business Entities", "/our-services/formation-of-business-entities/"),
+        ("Company Law and LLP Compliances", "/our-services/company-law-llp-compliances/"),
+        ("SEBI Matters and IPO Services", "/our-services/sebi-matters-and-ipo-services/"),
+        ("FEMA Matters", "/our-services/fema-matters/"),
+        ("Intellectual Property Rights - Trademark", "/our-services/intellectual-property-rights-trademark-tm/"),
+        ("Amalgamation, Merger, De-merger and Takeover", "/our-services/amalgamation-merger-de-merger-takeover/"),
+        ("RBI and NBFC Related Compliances", "/our-services/rbi-and-nbfc-related-compliances/"),
+        ("Transactional Due Diligence Services", "/our-services/transactional-due-diligence-services/"),
+        ("Corporate Governance Services", "/our-services/corporate-governance-services/"),
+        ("NCLT Services", "/our-services/nclt-services/"),
+        ("Corporate Law and Advisory", "/our-services/corporate-law-and-advisory/"),
+        ("Agreements and Petitions", "/our-services/agreements-petitions/"),
+        ("Liquidation under Insolvency and Bankruptcy Code", "/our-services/liquidation-under-insolvency-and-bankruptcy-code-2016/"),
+        ("Legal Metrology Act", "/our-services/legal-metrology-act-2009/"),
+        ("XBRL Filing", "/our-services/xbrl-filing/"),
+        ("Other Services", "/our-services/other-services/")
+    };
+}
+
+<section class="service-detail-hero">
+    <div class="container site-container">
+        <span class="eyebrow">Our Services</span>
+        <h1>Legal Metrology<br />Act, 2009</h1>
+        <p>Professional support for legal metrology compliance, licensing, labeling, reporting and regulatory coordination.</p>
+    </div>
+</section>
+
+<section class="service-detail-section section-space">
+    <div class="container site-container">
+        <div class="row gy-5">
+            <div class="col-lg-8">
+                <span class="eyebrow eyebrow-dark">Legal Metrology Act, 2009</span>
+                <h2 class="section-title">Practical compliance support under Legal Metrology</h2>
+                <p class="lead-copy">We assist businesses with compliance requirements under the Legal Metrology Act related to declarations, licensing, reporting and procedural alignment.</p>
+                <p>Our support helps companies maintain labeling and measurement compliance standards while coordinating statutory filings and communication with regulatory authorities.</p>
+
+                <div class="service-detail-points">
+                    <h3>Our support includes</h3>
+                    <div class="service-detail-list">
+                        <article><span>01</span><div><h3>Advising on Compliance Requirements</h3><p>Guidance on applicability of the Legal Metrology Act to products, packaging and trade practices, including correct declarations for weight, measure and price labeling.</p></div></article>
+                        <article><span>02</span><div><h3>Registration and Licensing</h3><p>Assistance in obtaining registrations, licenses and approvals from the Legal Metrology Department for manufacturing, selling or packaging of pre-packaged commodities.</p></div></article>
+                        <article><span>03</span><div><h3>Drafting and Reviewing Documents</h3><p>Preparation and review support for statutory documents, labels, declarations and reports to align with prescribed standards under the Act.</p></div></article>
+                        <article><span>04</span><div><h3>Conducting Internal Audits</h3><p>Compliance audit support to verify accuracy of weights and measures used in production and sales, and to check proper labeling as per legal requirements.</p></div></article>
+                        <article><span>05</span><div><h3>Filing Returns and Reports</h3><p>Assistance in timely filing of periodic returns, compliance reports and declarations mandated under Legal Metrology rules.</p></div></article>
+                        <article><span>06</span><div><h3>Liaison with Regulatory Authorities</h3><p>Representation support before Legal Metrology officers during inspections, audits and hearings, including coordination for non-compliance issue resolution.</p></div></article>
+                        <article><span>07</span><div><h3>Training and Awareness</h3><p>Training sessions for management and operational teams on legal metrology requirements, updates and compliance best practices to minimize risk.</p></div></article>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <aside class="service-detail-sidebar">
+                    <h2>Our Services</h2>
+                    @foreach (var service in relatedServices)
+                    {
+                        if (service.Item1 == "Legal Metrology Act")
+                        {
+                            <a class="active" href="@service.Item2">@service.Item1</a>
+                        }
+                        else
+                        {
+                            <a href="@service.Item2">@service.Item1 <span>↗</span></a>
+                        }
+                    }
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail-cta section-space-sm">
+    <div class="container site-container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+                <span class="eyebrow">Compliance clarity. Practical implementation.</span>
+                <h2>Discuss your legal metrology requirement with us</h2>
+                <p>Get structured support for licensing, labeling, filings and authority coordination.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"><a class="btn btn-gold" href="/Home/Contact">Contact Sonagra <span>↗</span></a></div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,85 @@
+@{
+    ViewData["Title"] = "Agreements & Petitions | Sonagra & Company";
+    ViewData["Description"] = "Agreements and petitions support from Sonagra & Company for drafting, vetting, representation and legal-regulatory coordination.";
+
+    var relatedServices = new[]
+    {
+        ("Formation of Business Entities", "/our-services/formation-of-business-entities/"),
+        ("Company Law & LLP Compliances", "/our-services/company-law-llp-compliances/"),
+        ("SEBI Matters and IPO Services", "/our-services/sebi-matters-and-ipo-services/"),
+        ("FEMA Matters", "/our-services/fema-matters/"),
+        ("Intellectual Property Rights - Trademark (TM)", "/our-services/intellectual-property-rights-trademark-tm/"),
+        ("Amalgamation, Merger, De-merger & Takeover", "/our-services/amalgamation-merger-de-merger-takeover/"),
+        ("RBI and NBFC Related Compliances", "/our-services/rbi-and-nbfc-related-compliances/"),
+        ("Transactional Due Diligence Services", "/our-services/transactional-due-diligence-services/"),
+        ("Corporate Governance Services", "/our-services/corporate-governance-services/"),
+        ("NCLT Services", "/our-services/nclt-services/"),
+        ("Agreements & Petitions", "/our-services/agreements-petitions/"),
+        ("Liquidation Under Insolvency and Bankruptcy Code 2016", "/our-services/liquidation-under-insolvency-and-bankruptcy-code-2016/"),
+        ("Legal Metrology Act, 2009", "/our-services/legal-metrology-act-2009/"),
+        ("XBRL Filing", "/our-services/xbrl-filing/"),
+        ("Other Services", "/our-services/other-services/")
+    };
+}
+
+<section class="service-detail-hero">
+    <div class="container site-container">
+        <span class="eyebrow">Our Services</span>
+        <h1>Agreements &amp;<br />Petitions</h1>
+        <p>Structured support for drafting, vetting and representation across important corporate and regulatory matters.</p>
+    </div>
+</section>
+
+<section class="service-detail-section section-space">
+    <div class="container site-container">
+        <div class="row gy-5">
+            <div class="col-lg-8">
+                <span class="eyebrow eyebrow-dark">Agreements &amp; Petitions</span>
+                <h2 class="section-title">Our Services</h2>
+                <p class="lead-copy">We provide professional support for drafting, review and procedural representation in corporate and regulatory matters.</p>
+                <p>Our team assists with agreements and petitions that need legal clarity, process readiness and coordination with relevant authorities and professionals.</p>
+                <p>Whether the requirement is documentation, opinion support or representation planning, we focus on practical execution aligned with applicable legal and regulatory frameworks.</p>
+
+                <div class="service-detail-points">
+                    <h3>Agreements &amp; Petitions</h3>
+                    <div class="service-detail-list">
+                        <article><span>01</span><div><h3>Drafting and Vetting of Agreements</h3><p>Drafting and review support for JV agreements, share subscription and shareholders agreements, commercial agreements and wills.</p></div></article>
+                        <article><span>02</span><div><h3>Representation Before Authorities</h3><p>Support for representation planning and procedural coordination before NCLT, MCA, Regional Director, Registrar of Companies, RBI and Registrar of Trademarks.</p></div></article>
+                        <article><span>03</span><div><h3>Legal Opinion Support</h3><p>Legal opinion assistance in matters related to the Companies Act, LLP Act and FEMA requirements.</p></div></article>
+                        <article><span>04</span><div><h3>Coordination with Solicitors and Advocates</h3><p>Co-ordination support with solicitors and advocates to help maintain documentation consistency and procedural readiness.</p></div></article>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <aside class="service-detail-sidebar">
+                    <h2>Our Services</h2>
+                    @foreach (var service in relatedServices)
+                    {
+                        if (service.Item1 == "Agreements & Petitions")
+                        {
+                            <a class="active" href="@service.Item2">@service.Item1</a>
+                        }
+                        else
+                        {
+                            <a href="@service.Item2">@service.Item1 <span>↗</span></a>
+                        }
+                    }
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail-cta section-space-sm">
+    <div class="container site-container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+                <span class="eyebrow">Structured legal documentation support.</span>
+                <h2>Discuss your agreements and petitions requirement with us</h2>
+                <p>Get practical support for drafting, vetting, legal opinion and process coordination.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"><a class="btn btn-gold" href="/Home/Contact">Contact Sonagra <span>↗</span></a></div>
+        </div>
+    </div>
+</section>

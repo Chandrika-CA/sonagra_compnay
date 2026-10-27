@@ -143,4 +143,67 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    const counterElements = document.querySelectorAll('.counter-number[data-counter-target]');
+
+    const animateCounter = (element) => {
+        if (!element || element.dataset.animated === 'true') {
+            return;
+        }
+
+        const target = Number.parseInt(element.dataset.counterTarget || '0', 10);
+        if (!Number.isFinite(target) || target <= 0) {
+            element.textContent = '0';
+            element.dataset.animated = 'true';
+            return;
+        }
+
+        const duration = 1500;
+        const start = performance.now();
+        const step = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            element.textContent = Math.floor(progress * target).toString();
+
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                element.textContent = target.toString();
+                element.dataset.animated = 'true';
+            }
+        };
+
+        window.requestAnimationFrame(step);
+    };
+
+    if ('IntersectionObserver' in window) {
+        if (revealElements.length > 0) {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
+
+            revealElements.forEach((element) => revealObserver.observe(element));
+        }
+
+        if (counterElements.length > 0) {
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            counterElements.forEach((element) => counterObserver.observe(element));
+        }
+    } else {
+        revealElements.forEach((element) => element.classList.add('is-visible'));
+        counterElements.forEach((element) => animateCounter(element));
+    }
 });

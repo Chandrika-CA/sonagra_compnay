@@ -1,0 +1,86 @@
+@{
+    ViewData["Title"] = "Other Services | Sonagra & Company";
+    ViewData["Description"] = "Other support services for MSME registration, ISIN liaison, PAN/TAN, LEI registration, share valuation and DSC renewals.";
+
+    var relatedServices = new[]
+    {
+        ("Formation of Business Entities", "/our-services/formation-of-business-entities/"),
+        ("Company Law and LLP Compliances", "/our-services/company-law-llp-compliances/"),
+        ("SEBI Matters and IPO Services", "/our-services/sebi-matters-and-ipo-services/"),
+        ("FEMA Matters", "/our-services/fema-matters/"),
+        ("Intellectual Property Rights - Trademark", "/our-services/intellectual-property-rights-trademark-tm/"),
+        ("Amalgamation, Merger, De-merger and Takeover", "/our-services/amalgamation-merger-de-merger-takeover/"),
+        ("RBI and NBFC Related Compliances", "/our-services/rbi-and-nbfc-related-compliances/"),
+        ("Transactional Due Diligence Services", "/our-services/transactional-due-diligence-services/"),
+        ("Corporate Governance Services", "/our-services/corporate-governance-services/"),
+        ("NCLT Services", "/our-services/nclt-services/"),
+        ("Corporate Law and Advisory", "/our-services/corporate-law-and-advisory/"),
+        ("Agreements and Petitions", "/our-services/agreements-petitions/"),
+        ("Liquidation under Insolvency and Bankruptcy Code", "/our-services/liquidation-under-insolvency-and-bankruptcy-code-2016/"),
+        ("Legal Metrology Act", "/our-services/legal-metrology-act-2009/"),
+        ("XBRL Filing", "/our-services/xbrl-filing/"),
+        ("Other Services", "/our-services/other-services/")
+    };
+}
+
+<section class="service-detail-hero">
+    <div class="container site-container">
+        <span class="eyebrow">Our Services</span>
+        <h1>Other Services</h1>
+        <p>Additional corporate support services for registration, liaison, filings and business compliance requirements.</p>
+    </div>
+</section>
+
+<section class="service-detail-section section-space">
+    <div class="container site-container">
+        <div class="row gy-5">
+            <div class="col-lg-8">
+                <span class="eyebrow eyebrow-dark">Other Services</span>
+                <h2 class="section-title">Practical support for additional compliance needs</h2>
+                <p class="lead-copy">We provide structured support for a wide range of additional corporate and compliance requirements beyond core service categories.</p>
+                <p>Our support is designed to help businesses complete registration, documentation and follow-up processes with clarity and procedural alignment.</p>
+
+                <div class="service-detail-points">
+                    <h3>Our support includes</h3>
+                    <div class="service-detail-list">
+                        <article><span>01</span><div><h3>MSME Registration</h3><p>Assistance with MSME registration process and related compliance documentation requirements.</p></div></article>
+                        <article><span>02</span><div><h3>Demat and ISIN Related Services</h3><p>Support including liaison and follow-up with RTA, NSDL and CDSL for demat and ISIN related matters.</p></div></article>
+                        <article><span>03</span><div><h3>PAN and TAN Applications</h3><p>Assistance with PAN/TAN applications and related procedural requirements for entities.</p></div></article>
+                        <article><span>04</span><div><h3>LEI Registration of Corporates</h3><p>Support for corporate LEI registration and associated documentation workflows.</p></div></article>
+                        <article><span>05</span><div><h3>Valuation of Share Capital</h3><p>Coordination support for valuation of share capital of companies as per applicable requirements.</p></div></article>
+                        <article><span>06</span><div><h3>Acquire and Renewal of DSC</h3><p>Assistance with procurement and renewal of digital signature certificates for compliance and filing activities.</p></div></article>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <aside class="service-detail-sidebar">
+                    <h2>Our Services</h2>
+                    @foreach (var service in relatedServices)
+                    {
+                        if (service.Item1 == "Other Services")
+                        {
+                            <a class="active" href="@service.Item2">@service.Item1</a>
+                        }
+                        else
+                        {
+                            <a href="@service.Item2">@service.Item1 <span>↗</span></a>
+                        }
+                    }
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail-cta section-space-sm">
+    <div class="container site-container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+                <span class="eyebrow">Additional support. Reliable execution.</span>
+                <h2>Discuss your additional service requirement with us</h2>
+                <p>Connect with Sonagra &amp; Company for practical support on corporate registration and compliance-related needs.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"><a class="btn btn-gold" href="/Home/Contact">Contact Sonagra <span>↗</span></a></div>
+        </div>
+    </div>
+</section>

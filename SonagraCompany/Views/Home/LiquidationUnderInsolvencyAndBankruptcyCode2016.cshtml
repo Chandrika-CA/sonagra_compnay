@@ -1,0 +1,88 @@
+@{
+    ViewData["Title"] = "Liquidation Under Insolvency and Bankruptcy Code 2016 | Sonagra & Company";
+    ViewData["Description"] = "Liquidation process support under IBC 2016 for compliance, documentation, filings and stakeholder coordination.";
+
+    var relatedServices = new[]
+    {
+        ("Formation of Business Entities", "/our-services/formation-of-business-entities/"),
+        ("Company Law and LLP Compliances", "/our-services/company-law-llp-compliances/"),
+        ("SEBI Matters and IPO Services", "/our-services/sebi-matters-and-ipo-services/"),
+        ("FEMA Matters", "/our-services/fema-matters/"),
+        ("Intellectual Property Rights - Trademark", "/our-services/intellectual-property-rights-trademark-tm/"),
+        ("Amalgamation, Merger, De-merger and Takeover", "/our-services/amalgamation-merger-de-merger-takeover/"),
+        ("RBI and NBFC Related Compliances", "/our-services/rbi-and-nbfc-related-compliances/"),
+        ("Transactional Due Diligence Services", "/our-services/transactional-due-diligence-services/"),
+        ("Corporate Governance Services", "/our-services/corporate-governance-services/"),
+        ("NCLT Services", "/our-services/nclt-services/"),
+        ("Corporate Law and Advisory", "/our-services/corporate-law-and-advisory/"),
+        ("Agreements and Petitions", "/our-services/agreements-petitions/"),
+        ("Liquidation under Insolvency and Bankruptcy Code", "/our-services/liquidation-under-insolvency-and-bankruptcy-code-2016/"),
+        ("Legal Metrology Act", "/our-services/legal-metrology-act-2009/"),
+        ("XBRL Filing", "/our-services/xbrl-filing/"),
+        ("Other Services", "/our-services/other-services/")
+    };
+}
+
+<section class="service-detail-hero">
+    <div class="container site-container">
+        <span class="eyebrow">Our Services</span>
+        <h1>Liquidation Under Insolvency<br />and Bankruptcy Code 2016</h1>
+        <p>Structured support for liquidation process compliance, documentation, filings and stakeholder coordination under IBC regulations.</p>
+    </div>
+</section>
+
+<section class="service-detail-section section-space">
+    <div class="container site-container">
+        <div class="row gy-5">
+            <div class="col-lg-8">
+                <span class="eyebrow eyebrow-dark">Liquidation under IBC 2016</span>
+                <h2 class="section-title">Practical support for liquidation process requirements</h2>
+                <p class="lead-copy">We assist with liquidation process responsibilities under Chapter III of IBC, including documentation, filings, records and regulatory coordination.</p>
+                <p>Our support is designed to help liquidators and stakeholders maintain procedural accuracy, statutory timelines and transparent communication throughout the liquidation process.</p>
+
+                <div class="service-detail-points">
+                    <h3>Our support includes</h3>
+                    <div class="service-detail-list">
+                        <article><span>01</span><div><h3>Advisory Support to Liquidator</h3><p>Assistance to the appointed liquidator with legal compliance, documentation, timelines and procedural requirements under Chapter III of IBC related to liquidation.</p></div></article>
+                        <article><span>02</span><div><h3>Preparation and Vetting of Documents</h3><p>Drafting and review support for public announcements, preliminary and final reports, asset sale notices and distribution statements in line with liquidation process regulations.</p></div></article>
+                        <article><span>03</span><div><h3>Regulatory Filings and Reporting</h3><p>Assistance with required forms and reports before NCLT, IBBI and Registrar of Companies as per applicable IBC timelines.</p></div></article>
+                        <article><span>04</span><div><h3>Maintaining Registers and Records</h3><p>Support in maintaining statutory records such as asset register, claims register and distribution register for transparent process documentation.</p></div></article>
+                        <article><span>05</span><div><h3>Claims Verification and Communication</h3><p>Support in scrutinizing claims submitted by stakeholders and creditors, preparing stakeholder lists and communication related to claims resolution.</p></div></article>
+                        <article><span>06</span><div><h3>Asset Sale and Distribution Assistance</h3><p>Legal and compliance support during auction/private sale of assets, including preparation of sale reports and distribution workflows under prescribed waterfall mechanism.</p></div></article>
+                        <article><span>07</span><div><h3>Liaison and Representation</h3><p>Liaison with ROC, IBBI, Income Tax Department and NCLT, including representation support where authorised.</p></div></article>
+                        <article><span>08</span><div><h3>Compliance with Liquidation Regulations</h3><p>Support for adherence to IBBI (Liquidation Process) Regulations, 2016 including publication requirements, disclosures, timelines and reporting formats.</p></div></article>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <aside class="service-detail-sidebar">
+                    <h2>Our Services</h2>
+                    @foreach (var service in relatedServices)
+                    {
+                        if (service.Item1 == "Liquidation under Insolvency and Bankruptcy Code")
+                        {
+                            <a class="active" href="@service.Item2">@service.Item1</a>
+                        }
+                        else
+                        {
+                            <a href="@service.Item2">@service.Item1 <span>↗</span></a>
+                        }
+                    }
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail-cta section-space-sm">
+    <div class="container site-container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-8">
+                <span class="eyebrow">Process clarity for liquidation matters.</span>
+                <h2>Discuss your liquidation support requirement with us</h2>
+                <p>Get practical assistance for liquidation-related documentation, filings and compliance coordination.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"><a class="btn btn-gold" href="/Home/Contact">Contact Sonagra <span>↗</span></a></div>
+        </div>
+    </div>
+</section>
