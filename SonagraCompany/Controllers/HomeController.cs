@@ -32,6 +32,14 @@ namespace SonagraCompany.Controllers
             return View();
         }
 
+        [Route("our-services")]
+        public IActionResult OurServices()
+        {
+            ViewData["Title"] = "Our Services | Sonagra & Company";
+            ViewData["Description"] = "Explore the corporate, company law, SEBI, FEMA, governance and compliance services offered by Sonagra & Company.";
+            return View();
+        }
+
         [Route("our-services/formation-of-business-entities")]
         public IActionResult FormationOfBusinessEntities()
         {
