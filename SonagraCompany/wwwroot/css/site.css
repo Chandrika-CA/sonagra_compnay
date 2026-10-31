@@ -138,8 +138,8 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .careers-cta { color: #fff; background: var(--navy); }
 .careers-cta h2 { margin: 0 0 10px; font: 500 clamp(1.8rem, 3vw, 2.7rem)/1.2 'Playfair Display', serif; }
 .careers-cta p { margin: 0; color: #b9c7da; }
-.service-detail-hero { padding: 105px 0 110px; color: #fff; background: linear-gradient(115deg, rgba(7, 21, 43, .96), rgba(11, 30, 59, .82)), url('../images/Corporate_Law_and_Advisory.png') center/cover; }
-.governance-hero { background: linear-gradient(115deg, rgba(7, 21, 43, .94), rgba(11, 30, 59, .8)), url('../images/pexels-kindelmedia-7688173.jpg.png') center/cover; }
+.service-detail-hero { padding: 105px 0 110px; color: #fff; background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/Corporate_Law_and_Advisory.png') center/cover; }
+.governance-hero { background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/pexels-kindelmedia-7688173.jpg.png') center/cover; }
 .service-detail-hero h1 { margin: 0 0 18px; font: 500 clamp(2.6rem, 5vw, 4.7rem)/1.08 'Playfair Display', serif; }
 .service-detail-hero p { max-width: 650px; margin: 0; color: #dce4f0; font-size: 1.05rem; }
 .service-detail-section p { color: var(--muted); }
@@ -207,7 +207,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .service-detail-cta { color: #fff; background: var(--navy); }
 .service-detail-cta h2 { margin: 0 0 10px; font: 500 clamp(1.8rem, 3vw, 2.7rem)/1.2 'Playfair Display', serif; }
 .service-detail-cta p { margin: 0; color: #b9c7da; }
-.formation-hero { min-height: 470px; display: flex; align-items: center; color: #fff; background: linear-gradient(90deg, rgba(5, 18, 37, .94), rgba(5, 18, 37, .52)), url('../images/sonagra-company-formation-advisory.png') center/cover; }
+.formation-hero { min-height: 470px; display: flex; align-items: center; color: #fff; background: linear-gradient(90deg, rgba(5, 18, 37, .40), rgba(5, 18, 37, .22)), url('../images/sonagra-company-formation-advisory.png') center/cover; }
 .formation-hero-content { max-width: 760px; padding: 95px 0; }
 .formation-hero h1 { max-width: 760px; margin: 14px 0 20px; font: 500 clamp(2.7rem, 5vw, 5rem)/1.05 'Playfair Display', serif; }
 .formation-hero p { max-width: 650px; margin: 0; color: #dce4f0; font-size: 1.08rem; line-height: 1.8; }
@@ -310,7 +310,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .fema-reference-item p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.75; }
 .fema-reference-sidebar { position: sticky; top: 30px; }
 .fema-reference-sidebar a.active { color: var(--gold); }
-.fema-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .96), rgba(11, 30, 59, .82)), url('../images/FEMA_Matters.png'); }
+.fema-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/FEMA_Matters.png'); }
 .trademark-reference { background: #fff; }
 .trademark-reference main > p { color: var(--muted); font-size: .94rem; line-height: 1.85; }
 .trademark-reference main > .lead-copy { color: var(--navy); font-size: 1.08rem; line-height: 1.75; }
@@ -320,7 +320,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .trademark-reference-item p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.75; }
 .trademark-reference-sidebar { position: sticky; top: 30px; }
 .trademark-reference-sidebar a.active { color: var(--gold); }
-.trademark-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .96), rgba(11, 30, 59, .82)), url('../images/Intellectual_Property_Rights_Trademark.png'); }
+.trademark-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/Intellectual_Property_Rights_Trademark.png'); }
 .amalgamation-reference { background: #fff; }
 .amalgamation-reference main > p { color: var(--muted); font-size: .94rem; line-height: 1.85; }
 .amalgamation-reference main > .lead-copy { color: var(--navy); font-size: 1.08rem; line-height: 1.75; }
@@ -330,7 +330,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .amalgamation-reference-item p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.75; }
 .amalgamation-reference-sidebar { position: sticky; top: 30px; }
 .amalgamation-reference-sidebar a.active { color: var(--gold); }
-.amalgamation-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .96), rgba(11, 30, 59, .82)), url('../images/Amalgamation.png'); }
+.amalgamation-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/Amalgamation.png'); }
 .company-law-intro { max-width: 980px; margin: 0 auto 34px; }
 .company-law-feature-image { display: grid; grid-template-columns: 1.15fr .85fr; align-items: stretch; margin: 0 auto 72px; background: var(--paper); }
 .company-law-feature-image img { width: 100%; height: 335px; object-fit: cover; }
@@ -457,7 +457,8 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .scroll-reveal { opacity: 0; transform: translateX(0); transition: transform .7s ease, opacity .7s ease; }
 .scroll-reveal.reveal-left { transform: translateX(-42px); }
 .scroll-reveal.reveal-right { transform: translateX(42px); }
-.scroll-reveal.is-visible { opacity: 1; transform: translateX(0); }
+.scroll-reveal.reveal-up { transform: translateY(42px); }
+.scroll-reveal.is-visible { opacity: 1; transform: none; }
 .reference-stat-band { padding: 0 0 46px; background: #fff; }
 .reference-stat-cta { justify-content: center; text-align: center; }
 .reference-stat { display: flex; align-items: center; justify-content: center; gap: 24px; }
@@ -504,7 +505,8 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal,
   .scroll-reveal.reveal-left,
-  .scroll-reveal.reveal-right { opacity: 1; transform: none; transition: none; }
+  .scroll-reveal.reveal-right,
+  .scroll-reveal.reveal-up { opacity: 1; transform: none; transition: none; }
 }
 
 @media (max-width: 575.98px) {
@@ -796,7 +798,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .home-cta { display: flex; align-items: center; justify-content: space-between; gap: 35px; padding: 65px 8%; color: #fff; background: var(--navy-deep); }
 .home-cta h2 { margin: 8px 0 0; font: 500 clamp(2rem, 3vw, 3rem)/1.17 'Playfair Display', serif; }
 
-.nclt-clone-hero { padding: 95px 0; color: #fff; background: linear-gradient(120deg, rgba(7, 21, 43, .95), rgba(11, 30, 59, .82)), url('https://hsmehta.com/wp-content/uploads/2025/07/pexels-kindelmedia-7688173.jpg') center/cover; }
+.nclt-clone-hero { padding: 95px 0; color: #fff; background: linear-gradient(120deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('https://hsmehta.com/wp-content/uploads/2025/07/pexels-kindelmedia-7688173.jpg') center/cover; }
 .nclt-clone-hero h1 { max-width: 900px; margin: 0 0 18px; font: 500 clamp(2.2rem, 5vw, 4rem)/1.12 'Playfair Display', serif; }
 .nclt-clone-hero p { max-width: 900px; margin: 0; color: #dce4f0; font-size: 1rem; }
 .nclt-clone-section { padding: 80px 0 100px; background: #fff; }
@@ -927,3 +929,114 @@ section:has(+ .reference-cta.section-space-sm),
   .team-row-photo, .team-row-reverse .team-row-photo { order: -1; width: 240px; height: 240px; margin: 0 auto; }
   .team-row-text, .team-row-reverse .team-row-text { order: 0; padding: 0 0 0 20px; border-right: 0; border-left: 2px solid var(--gold); }
 }
+
+/* Home page: wider, larger text blocks beside the images */
+main > .reference-intro-lead p,
+main > .reference-intro p,
+main > .reference-advisory p { max-width: none; font-size: 1.02rem; line-height: 1.85; text-align: justify; }
+main > .reference-intro .section-title,
+main > .reference-advisory .section-title,
+main > .reference-intro-lead .section-title { max-width: none; margin-right: 0; margin-left: 0; font-size: clamp(2rem, 3vw, 2.8rem); }
+main > .reference-intro p.lead-copy,
+main > .reference-advisory p.lead-copy { font-size: 1.12rem; }
+main > .reference-intro-lead .reference-intro-points li,
+main > .reference-advisory .reference-intro-points li { font-size: 1rem; line-height: 1.7; }
+main > .reference-intro .reference-image-frame,
+main > .reference-advisory .reference-advisory-image { height: 500px; }
+main > .reference-intro-lead .reference-small-image { height: 440px; }
+@media (max-width: 991px) {
+  main > .reference-intro .reference-image-frame,
+  main > .reference-advisory .reference-advisory-image,
+  main > .reference-intro-lead .reference-small-image { height: 300px; }
+  main > .reference-intro p,
+  main > .reference-advisory p,
+  main > .reference-intro-lead p { text-align: left; }
+}
+
+/* Home page: one consistent, larger size for every section title */
+main > .reference-intro-lead .section-title,
+main > .reference-intro .section-title,
+main > .reference-advisory .section-title,
+main > .reference-services .section-title,
+main > .reference-why .section-title,
+main > .reference-sectors .section-title,
+main > .reference-faq .section-title { font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1.18; }
+main > .reference-services .reference-heading,
+main > .reference-why .reference-heading { max-width: 900px; }
+main > .reference-services .reference-heading > p,
+main > .reference-why .reference-heading > p,
+main > .reference-sectors .col-lg-5 > p,
+main > .reference-faq .col-lg-4 > p { font-size: 1rem; line-height: 1.8; }
+
+/* Services menu: small solid down-arrow right after the label, in line with the text */
+.nav-chevron { display: inline-block; width: 0; height: 0; margin-left: 6px; font-size: 0; line-height: 0; vertical-align: middle; border-top: 5px solid currentColor; border-right: 4px solid transparent; border-left: 4px solid transparent; color: inherit; transform: translateY(-1px); transition: transform .2s ease; }
+.services-nav-item:hover .nav-chevron, .services-nav-item.menu-open .nav-chevron { transform: translateY(-1px) rotate(180deg); }
+
+/* Home hero: lighter, even overlay so the full photo shows (no dark block on the left) */
+.reference-hero-overlay { background: linear-gradient(rgba(7, 21, 43, .30), rgba(7, 21, 43, .30)); }
+.reference-hero-image { filter: brightness(1.12) saturate(1.05); }
+.reference-hero-content .eyebrow, .reference-hero-content h1, .reference-hero-content p { text-shadow: 0 2px 14px rgba(7, 21, 43, .65); }
+
+/* Tighter, even spacing between stacked sections */
+.reference-intro-lead + .reference-intro.section-space { padding-top: 24px; }
+.reference-intro.section-space + .reference-advisory.section-space { padding-top: 0; }
+.reference-cta:not(.section-space-sm) { padding-bottom: 56px; }
+.reference-clients.section-space + .reference-call-now.section-space { padding-top: 0; }
+.reference-call-now.section-space { padding-bottom: 72px; }
+.sectors-intro.section-space, .careers-intro.section-space { padding-bottom: 64px; }
+
+/* Corporate governance page: same wide, fixed-size text blocks as the home page */
+.cg-page .reference-intro p,
+.cg-page .reference-advisory p { max-width: none; font-size: 1.02rem; line-height: 1.85; text-align: justify; }
+.cg-page .reference-intro p.lead-copy,
+.cg-page .reference-advisory p.lead-copy { font-size: 1.12rem; }
+.cg-page .reference-intro .section-title,
+.cg-page .reference-advisory .section-title { max-width: none; font-size: clamp(2rem, 3vw, 2.6rem); line-height: 1.18; }
+.cg-page .reference-advisory .reference-intro-points li { font-size: 1rem; line-height: 1.7; }
+.cg-page .reference-intro .reference-image-frame,
+.cg-page .reference-advisory .reference-advisory-image { height: 440px; }
+@media (max-width: 991px) {
+  .cg-page .reference-intro p,
+  .cg-page .reference-advisory p { text-align: left; }
+  .cg-page .reference-intro .reference-image-frame,
+  .cg-page .reference-advisory .reference-advisory-image { height: 300px; }
+}
+
+/* Service page heroes: keep the text readable on the lighter photo */
+.service-detail-hero .eyebrow, .service-detail-hero h1, .service-detail-hero p,
+.formation-hero .eyebrow, .formation-hero h1, .formation-hero p,
+.nclt-clone-hero h1, .nclt-clone-hero p { text-shadow: 0 2px 14px rgba(7, 21, 43, .6); }
+
+/* Formation page: wide, fixed-size text blocks and tighter spacing, like the home page */
+.formation-reference-section p,
+.formation-reference-section li { font-size: 1.02rem; line-height: 1.85; text-align: justify; }
+.formation-reference-section .lead-copy { font-size: 1.12rem; }
+.formation-reference-services p { font-size: .95rem; line-height: 1.75; }
+.formation-reference-section h2 { font-size: clamp(2rem, 3vw, 2.6rem); }
+@media (min-width: 992px) {
+  .formation-reference-page.section-space { padding: 72px 0; }
+  .formation-reference-main { max-width: none; }
+  .formation-reference-main .formation-reference-intro { max-width: none; }
+  .formation-reference-section { margin-bottom: 52px; }
+  .formation-two-column, .formation-two-column-reverse { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; align-items: center; }
+  .formation-reference-main .formation-two-column .formation-reference-image img { height: 440px; max-height: none; }
+  .formation-reference-section:not(.formation-two-column) > p { max-width: 1120px; }
+}
+@media (max-width: 991px) {
+  .formation-reference-section p, .formation-reference-section li { text-align: left; }
+  .formation-reference-section { margin-bottom: 40px; }
+}
+
+/* Home "Why Choose" block: two tidy rows (3 + 2, centred) */
+@media (min-width: 992px) {
+  main > .reference-why .row { justify-content: center; }
+  main > .reference-why .row > .col-lg-3 { flex: 0 0 auto; width: 33.3333%; }
+}
+
+/* Navy button hover: soft light blue instead of turning white */
+.btn-navy:hover, .btn-navy:focus { color: var(--navy); background: #dce6f4; border-color: var(--navy); }
+
+/* Button pressed (click) state: a distinct colour instead of falling back to white */
+.btn-navy:active, .btn-navy:focus:active { color: #fff; background: var(--gold); border-color: var(--gold); }
+.btn-gold:active, .btn-gold:focus:active { color: #fff; background: var(--navy); border-color: var(--navy); }
+.btn-navy, .btn-gold { transition: color .2s ease, background-color .2s ease, border-color .2s ease; }

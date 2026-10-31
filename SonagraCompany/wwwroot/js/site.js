@@ -79,6 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
         careerPhone.value = careerPhone.value.replace(/\D/g, '').slice(0, 10);
     });
 
+    const contactPhone = document.querySelector('#contactPhone');
+    contactPhone?.addEventListener('input', () => {
+        contactPhone.value = contactPhone.value.replace(/\D/g, '').slice(0, 10);
+    });
+
         serviceToggle.addEventListener('keydown', (event) => {
             if ((event.key === 'Enter' || event.key === ' ') && window.matchMedia('(max-width: 991.98px)').matches) {
                 event.preventDefault();
