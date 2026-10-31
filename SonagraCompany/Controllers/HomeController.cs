@@ -32,6 +32,20 @@ namespace SonagraCompany.Controllers
             return View();
         }
 
+        public IActionResult Team()
+        {
+            ViewData["Title"] = "Our Team | Sonagra & Company";
+            ViewData["Description"] = "Meet the professionals of Sonagra & Company – Company Secretaries, Chartered Accountants and legal experts supporting corporate governance and compliance.";
+            return View();
+        }
+
+        public IActionResult Blogs()
+        {
+            ViewData["Title"] = "Blogs | Sonagra & Company";
+            ViewData["Description"] = "Articles and updates from Sonagra & Company on corporate governance, company law, SEBI, FEMA and compliance.";
+            return View();
+        }
+
         [Route("our-services")]
         public IActionResult OurServices()
         {

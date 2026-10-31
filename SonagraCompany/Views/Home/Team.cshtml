@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Our Team | Sonagra & Company";
+    ViewData["Description"] = "Meet the professionals of Sonagra & Company – Company Secretaries, Chartered Accountants and legal experts supporting corporate governance and compliance.";
+
+    // Replace these placeholder entries with Sonagra & Company's own team members.
+    // Photo: put the image in wwwroot/images/team/ and set Photo to its file name.
+    var team = new[]
+    {
+        new TeamMember("Team Member Name", "Designation", "Qualifications", "Short profile of the team member: years of experience, areas of practice and the kind of clients and matters they advise on.", "sonagra-monogram.png"),
+        new TeamMember("Team Member Name", "Designation", "Qualifications", "Short profile of the team member: years of experience, areas of practice and the kind of clients and matters they advise on.", "sonagra-monogram.png"),
+        new TeamMember("Team Member Name", "Designation", "Qualifications", "Short profile of the team member: years of experience, areas of practice and the kind of clients and matters they advise on.", "sonagra-monogram.png")
+    };
+}
+
+@functions {
+    public record TeamMember(string Name, string Designation, string Qualifications, string Bio, string Photo);
+}
+
+<section class="service-detail-hero">
+    <div class="container site-container">
+        <span class="eyebrow">The people behind Sonagra &amp; Company</span>
+        <h1>Our Team</h1>
+    </div>
+</section>
+
+<section class="team-section">
+    <div class="container site-container">
+        @for (var i = 0; i < team.Length; i++)
+        {
+            var member = team[i];
+            var reverse = i % 2 == 1;
+            <article class="team-row @(reverse ? "team-row-reverse" : "")">
+                <div class="team-row-text">
+                    <h2>@member.Name</h2>
+                    <p class="team-row-role">@member.Designation &middot; @member.Qualifications</p>
+                    <p>@member.Bio</p>
+                </div>
+                <div class="team-row-photo"><img src="~/images/@member.Photo" alt="@member.Name" loading="lazy" /></div>
+            </article>
+        }
+    </div>
+</section>
+
+<section class="reference-cta section-space-sm">
+    <div class="container site-container">
+        <div class="reference-cta-inner">
+            <div>
+                <span class="eyebrow">Corporate expertise. Strategic growth.</span>
+                <h2>Speak with our team about your requirement</h2>
+            </div>
+            <a class="btn btn-gold" href="/Home/Contact">Contact Sonagra &amp; Company <span>↗</span></a>
+        </div>
+    </div>
+</section>

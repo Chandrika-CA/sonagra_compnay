@@ -207,3 +207,23 @@ document.addEventListener('DOMContentLoaded', () => {
         counterElements.forEach((element) => animateCounter(element));
     }
 });
+// Highlight the current service in the "Our Services" sidebar
+document.addEventListener('DOMContentLoaded', () => {
+    const normalise = (path) => path.toLowerCase().replace(/\/+$/, '');
+    const currentPath = normalise(window.location.pathname);
+
+    document.querySelectorAll('.service-detail-sidebar a').forEach((link) => {
+        if (normalise(new URL(link.getAttribute('href'), window.location.origin).pathname) !== currentPath) {
+            return;
+        }
+
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+        link.querySelector('span')?.remove();
+
+        const sidebar = link.closest('.service-detail-sidebar');
+        if (sidebar) {
+            sidebar.scrollTop = link.offsetTop - sidebar.clientHeight / 2;
+        }
+    });
+});
