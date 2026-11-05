@@ -1,0 +1,53 @@
+@model BlogPost
+@{
+    ViewData["Title"] = Model.Title;
+    ViewData["SeoTitle"] = Model.Title;
+    ViewData["SeoDescription"] = Model.Description;
+    ViewData["SeoKeywords"] = Model.Keywords;
+    ViewData["OgType"] = "article";
+    ViewData["DatePublished"] = Model.Published.ToString("yyyy-MM-dd");
+    ViewData["OgImage"] = "/images/" + Model.ImageFile;
+}
+
+<section class="service-detail-hero">
+    <div class="container site-container">
+        <span class="eyebrow">@Model.Category</span>
+        <h1>@Model.Title</h1>
+        <p><time datetime="@Model.Published.ToString("yyyy-MM-dd")">@Model.Published.ToString("dd MMM yyyy")</time> · @Model.ReadMinutes min read · By Sonagra &amp; Company</p>
+    </div>
+</section>
+
+<section class="section-space blog-post-section">
+    <div class="container site-container">
+        <div class="row gy-5 gx-lg-5">
+            <article class="col-lg-8 blog-post-content">
+                <img class="blog-post-image" src="~/images/@Model.ImageFile" alt="@Model.Title" />
+                @Html.Raw(Model.ContentHtml)
+                <div class="blog-post-back"><a class="text-link" href="/blogs">← All articles</a></div>
+            </article>
+            <aside class="col-lg-4">
+                <div class="service-detail-sidebar">
+                    <h2>Related Services</h2>
+                    @foreach (var service in Model.RelatedServices)
+                    {
+                        <a href="@service.Path">@service.Name <span>↗</span></a>
+                    }
+                    <a href="/our-services">All Services <span>↗</span></a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section class="reference-cta section-space-sm">
+    <div class="container site-container">
+        <div class="reference-cta-inner">
+            <div>
+                <span class="eyebrow">Need professional help?</span>
+                <h2>Talk to a company secretary in Morbi</h2>
+                <p>Share your requirement and our team will suggest a practical next step.</p>
+            </div>
+            <a class="btn btn-gold" href="/Home/Contact">Contact Sonagra &amp; Company <span>↗</span></a>
+        </div>
+    </div>
+</section>

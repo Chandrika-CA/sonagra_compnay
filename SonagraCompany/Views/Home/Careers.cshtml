@@ -22,18 +22,18 @@
             Qualifications = new[] { "LL.B.", "Bar Council Enrolment", "Excellent Drafting & Research" },
             Key = "Legal Associate or Lawyer"
         },
-        new
-        {
-            Title = "Chartered Accountant (CA)",
-            Qualifications = new[] { "Qualified CA", "0–5+ Years Experience", "Knowledge of Direct and Indirect Tax Laws", "Knowledge of Financial Management" },
-            Key = "Chartered Accountant"
-        },
-        new
-        {
-            Title = "Designer",
-            Qualifications = new[] { "Graphic and presentation design skills", "0–5+ Years Experience", "Proficient with presentation and design tools", "Photo and video editing knowledge" },
-            Key = "Designer"
-        },
+        // new
+        // {
+        //     Title = "Chartered Accountant (CA)",
+        //     Qualifications = new[] { "Qualified CA", "0–5+ Years Experience", "Knowledge of Direct and Indirect Tax Laws", "Knowledge of Financial Management" },
+        //     Key = "Chartered Accountant"
+        // },
+        // new
+        // {
+        //     Title = "Designer",
+        //     Qualifications = new[] { "Graphic and presentation design skills", "0–5+ Years Experience", "Proficient with presentation and design tools", "Photo and video editing knowledge" },
+        //     Key = "Designer"
+        // },
         new
         {
             Title = "Office Executive / General Staff",
@@ -43,7 +43,7 @@
     };
 }
 
-<section class="careers-page-hero">
+<section class="careers-page-hero uniform-hero">
     <div class="container site-container">
         <span class="eyebrow">Work with Sonagra &amp; Company</span>
         <h1>Careers</h1>
@@ -54,11 +54,11 @@
 <section class="section-space careers-intro">
     <div class="container site-container">
         <div class="row align-items-center gy-4">
-            <div class="col-lg-5">
+            <div class="col-lg-5 scroll-reveal reveal-left">
                 <span class="eyebrow eyebrow-dark">Join our team</span>
                 <h2 class="section-title">Grow with meaningful professional work</h2>
             </div>
-            <div class="col-lg-6 offset-lg-1">
+            <div class="col-lg-6 offset-lg-1 scroll-reveal reveal-right">
                 <p class="lead-copy">We welcome motivated professionals who value learning, integrity and high-quality client support.</p>
                 <p>At Sonagra &amp; Company, you will work on practical corporate, legal, compliance and advisory assignments while developing your skills in a collaborative professional environment.</p>
             </div>
@@ -68,11 +68,11 @@
 
 <section class="careers-roles-section section-space-sm">
     <div class="container site-container">
-        <div class="text-center careers-section-heading">
+        <div class="text-center careers-section-heading scroll-reveal reveal-up">
             <span class="eyebrow eyebrow-dark">Current opportunities</span>
             <h2 class="section-title">Find your next opportunity</h2>
         </div>
-        <div class="careers-role-grid">
+        <div class="careers-role-grid scroll-reveal reveal-up">
             @foreach (var role in roles)
             {
                 <article class="career-role-card">
@@ -93,7 +93,7 @@
 
 <section class="reference-cta section-space-sm">
     <div class="container site-container">
-        <div class="reference-cta-inner">
+        <div class="reference-cta-inner scroll-reveal reveal-up">
             <div>
                 <span class="eyebrow">Your next step</span>
                 <h2>Do not see the right role?</h2>

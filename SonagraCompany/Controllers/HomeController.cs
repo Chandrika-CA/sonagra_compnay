@@ -1,11 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using SonagraCompany.Models;
+using SonagraCompany.Services;
 using System.Diagnostics;
 
 namespace SonagraCompany.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ContactNotifier _contactNotifier;
+
+        public HomeController(ContactNotifier contactNotifier)
+        {
+            _contactNotifier = contactNotifier;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -39,11 +47,23 @@ namespace SonagraCompany.Controllers
             return View();
         }
 
+        [Route("blogs")]
+        [Route("Home/Blogs")]
         public IActionResult Blogs()
         {
-            ViewData["Title"] = "Blogs | Sonagra & Company";
-            ViewData["Description"] = "Articles and updates from Sonagra & Company on corporate governance, company law, SEBI, FEMA and compliance.";
-            return View();
+            return View(BlogCatalog.Posts);
+        }
+
+        [Route("blogs/{slug}")]
+        public IActionResult BlogPost(string slug)
+        {
+            var post = BlogCatalog.Find(slug);
+            if (post is null)
+            {
+                return NotFound();
+            }
+
+            return View(post);
         }
 
         [Route("our-services")]
@@ -102,11 +122,11 @@ namespace SonagraCompany.Controllers
             return View();
         }
 
-        [Route("our-services/amalgamation-merger-de-merger-takeover")]
-        public IActionResult AmalgamationMergerDeMergerTakeover()
+        [Route("our-services/certification-and-industrial-compliance-services")]
+        public IActionResult CertificationAndIndustrialComplianceServices()
         {
-            ViewData["Title"] = "Amalgamation, Merger, De-merger & Takeover | Sonagra & Company";
-            ViewData["Description"] = "Amalgamation, merger, de-merger, takeover, restructuring and corporate transaction support from Sonagra & Company.";
+            ViewData["Title"] = "Certification & Industrial Compliance Services | Sonagra & Company";
+            ViewData["Description"] = "ISO, CE and BIS certification and import-export registration support for manufacturers, traders and exporters from Sonagra & Company.";
             return View();
         }
 
@@ -184,14 +204,44 @@ namespace SonagraCompany.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult ValidateCareerApplication([FromForm] CareerApplicationRequest application)
+        [RequestSizeLimit(8 * 1024 * 1024)]
+        public async Task<IActionResult> ValidateCareerApplication([FromForm] CareerApplicationRequest application, IFormFile? resume)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(new { message = "Please enter a valid 10-digit phone number and complete the required fields." });
             }
 
-            return Ok(new { message = "Phone number validation passed. Application saving and notifications will be added after client confirmation." });
+            string? resumeName = null;
+            byte[]? resumeBytes = null;
+            if (resume is { Length: > 0 })
+            {
+                var extension = Path.GetExtension(resume.FileName).ToLowerInvariant();
+                if (extension is not (".pdf" or ".doc" or ".docx"))
+                {
+                    return BadRequest(new { message = "Please upload your resume as a PDF, DOC or DOCX file." });
+                }
+
+                if (resume.Length > 5 * 1024 * 1024)
+                {
+                    return BadRequest(new { message = "Your resume must be 5 MB or smaller." });
+                }
+
+                using var stream = new MemoryStream();
+                await resume.CopyToAsync(stream);
+                resumeBytes = stream.ToArray();
+                var baseName = new string(Path.GetFileNameWithoutExtension(resume.FileName)
+                    .Where(c => char.IsLetterOrDigit(c) || c is '-' or '_' or ' ').ToArray()).Trim();
+                resumeName = (baseName.Length > 0 ? baseName : "Resume") + extension;
+            }
+
+            var result = await _contactNotifier.SendCareerAsync(application, resumeName, resumeBytes);
+            if (!result.AnySent)
+            {
+                return StatusCode(StatusCodes.Status502BadGateway, new { message = "Sorry, we could not send your application right now. Please email your resume to cs@sonagra.com." });
+            }
+
+            return Ok(new { message = "Thank you. Your application has been sent and our team will contact you shortly." });
         }
 
         public IActionResult Privacy()
@@ -204,6 +254,32 @@ namespace SonagraCompany.Controllers
             ViewData["Title"] = "Contact Sonagra & Company in Morbi";
             ViewData["Description"] = "Contact Sonagra & Company in Morbi, Gujarat for company law compliance, ROC filing, governance and corporate advisory support.";
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Contact(ContactEnquiry enquiry)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewData["Title"] = "Contact Sonagra & Company in Morbi";
+                ViewData["Enquiry"] = enquiry;
+                ViewData["EnquiryError"] = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault()
+                    ?? "Please check the details and try again.";
+                return View();
+            }
+
+            var result = await _contactNotifier.SendAsync(enquiry);
+            if (result.AnySent)
+            {
+                TempData["EnquirySuccess"] = "Thank you. Your enquiry has been sent and our team will get back to you shortly.";
+            }
+            else
+            {
+                TempData["EnquiryError"] = "Sorry, we could not send your enquiry right now. Please call +91 75670 96966 or email cs@sonagra.com.";
+            }
+
+            return RedirectToAction(nameof(Contact));
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

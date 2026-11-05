@@ -2,6 +2,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.Configure<SonagraCompany.Services.ContactOptions>(builder.Configuration.GetSection(SonagraCompany.Services.ContactOptions.SectionName));
+builder.Services.AddHttpClient<SonagraCompany.Services.ContactNotifier>();
 
 var app = builder.Build();
 

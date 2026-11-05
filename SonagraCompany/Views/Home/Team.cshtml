@@ -16,7 +16,7 @@
     public record TeamMember(string Name, string Designation, string Qualifications, string Bio, string Photo);
 }
 
-<section class="service-detail-hero">
+<section class="service-detail-hero uniform-hero">
     <div class="container site-container">
         <span class="eyebrow">The people behind Sonagra &amp; Company</span>
         <h1>Our Team</h1>
@@ -30,12 +30,12 @@
             var member = team[i];
             var reverse = i % 2 == 1;
             <article class="team-row @(reverse ? "team-row-reverse" : "")">
-                <div class="team-row-text">
+                <div class="team-row-text scroll-reveal @(reverse ? "reveal-right" : "reveal-left")">
                     <h2>@member.Name</h2>
                     <p class="team-row-role">@member.Designation &middot; @member.Qualifications</p>
                     <p>@member.Bio</p>
                 </div>
-                <div class="team-row-photo"><img src="~/images/@member.Photo" alt="@member.Name" loading="lazy" /></div>
+                <div class="team-row-photo scroll-reveal @(reverse ? "reveal-left" : "reveal-right")"><img src="~/images/@member.Photo" alt="@member.Name" loading="lazy" /></div>
             </article>
         }
     </div>
@@ -43,7 +43,7 @@
 
 <section class="reference-cta section-space-sm">
     <div class="container site-container">
-        <div class="reference-cta-inner">
+        <div class="reference-cta-inner scroll-reveal reveal-up">
             <div>
                 <span class="eyebrow">Corporate expertise. Strategic growth.</span>
                 <h2>Speak with our team about your requirement</h2>

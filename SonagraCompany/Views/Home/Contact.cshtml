@@ -1,9 +1,10 @@
 @{
     ViewData["Title"] = "Contact Sonagra & Company in Morbi";
     ViewData["Description"] = "Contact Sonagra & Company in Morbi, Gujarat for company law compliance, ROC filing, governance and corporate advisory support.";
+    var prefill = ViewData["Enquiry"] as ContactEnquiry;
 }
 
-<section class="inner-page-hero">
+<section class="inner-page-hero uniform-hero">
     <div class="container site-container">
         <span class="eyebrow">Start a conversation</span>
         <h1>Contact Sonagra &amp; Company.</h1>
@@ -14,7 +15,7 @@
 <section class="contact-page section-space">
     <div class="container site-container">
         <div class="row gy-5">
-            <div class="col-lg-5">
+            <div class="col-lg-5 scroll-reveal reveal-left">
                 <span class="eyebrow eyebrow-dark">Our office</span>
                 <h2 class="section-title">Here when the next decision matters.</h2>
                 <p class="contact-intro">Connect with Sonagra &amp; Company for company law, ROC filing, LLP compliance, corporate governance, SEBI, FEMA, FDI and corporate advisory support.</p>
@@ -25,15 +26,35 @@
                 </div>
                 <div class="map-links"><a href="https://maps.app.goo.gl/jbeTXLArzdvhij428" target="_blank" rel="noopener noreferrer">Open supplied map link <span>↗</span></a><a href="https://maps.app.goo.gl/CXhEhev962HLuWV58" target="_blank" rel="noopener noreferrer">Open alternate supplied map link <span>↗</span></a></div>
             </div>
-            <div class="col-lg-6 offset-lg-1">
-                <div class="contact-form-card">
+            <div class="col-lg-6 offset-lg-1 scroll-reveal reveal-right">
+                <div class="contact-form-card" id="contact-form">
                     <span class="eyebrow eyebrow-dark">Send an enquiry</span>
                     <h2>How can we help?</h2>
-                    <form method="post" action="mailto:cs@sonagra.com" enctype="text/plain">
-                        <div class="row g-3"><div class="col-md-6"><label for="contactName">Name</label><input id="contactName" name="name" type="text" placeholder="Your name" required /></div><div class="col-md-6"><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" placeholder="you@example.com" required /></div><div class="col-12"><label for="contactPhone">Phone</label><input id="contactPhone" name="phone" type="tel" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" title="Enter a 10-digit phone number (numbers only)" placeholder="Your phone number" /></div><div class="col-12"><label for="contactMessage">Message</label><textarea id="contactMessage" name="message" rows="5" placeholder="Tell us briefly about your requirements" required></textarea></div><div class="col-12"><button class="btn btn-navy" type="submit">Send enquiry <span>↗</span></button></div></div>
+                    @if (TempData["EnquirySuccess"] is string enquirySuccess)
+                    {
+                        <div class="contact-alert contact-alert-success" role="status">@enquirySuccess</div>
+                    }
+                    @if ((TempData["EnquiryError"] ?? ViewData["EnquiryError"]) is string enquiryError)
+                    {
+                        <div class="contact-alert contact-alert-error" role="alert">@enquiryError</div>
+                    }
+                    <form method="post" asp-controller="Home" asp-action="Contact">
+                        <div class="row g-3"><div class="col-md-6"><label for="contactName">Name</label><input id="contactName" name="name" type="text" maxlength="100" placeholder="Your name" value="@(prefill?.Name)" required /></div><div class="col-md-6"><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" maxlength="150" placeholder="you@example.com" value="@(prefill?.Email)" required /></div><div class="col-12"><label for="contactPhone">Phone</label><input id="contactPhone" name="phone" type="tel" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" title="Enter a 10-digit phone number (numbers only)" placeholder="Your phone number" value="@(prefill?.Phone)" /></div><div class="col-12"><label for="contactMessage">Message</label><textarea id="contactMessage" name="message" rows="5" maxlength="3000" placeholder="Tell us briefly about your requirements" required>@(prefill?.Message)</textarea></div><div class="col-12"><button class="btn btn-navy" type="submit">Send enquiry <span>↗</span></button></div></div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+@section Scripts {
+    <script>
+        (function () {
+            var alertBox = document.querySelector('#contact-form .contact-alert');
+            if (!alertBox) { return; }
+            window.addEventListener('load', function () {
+                alertBox.scrollIntoView({ block: 'center' });
+            });
+        })();
+    </script>
+}
