@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
 
 :root {
   --navy: #0b1e3b;
@@ -77,7 +76,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .whatsapp-float { position: fixed; right: 24px; bottom: 24px; z-index: 50; display: inline-flex !important; align-items: center; gap: 8px; padding: 12px 17px; border-radius: 999px; color: #fff !important; background: #25d366; box-shadow: 0 8px 22px rgba(0, 0, 0, .2); font-size: .82rem !important; font-weight: 700; }
 .whatsapp-float:hover { color: #fff !important; background: #1da851; transform: translateY(-2px); }
 .whatsapp-float svg { width: 22px; height: 22px; fill: currentColor; }
-.about-page-hero { padding: 105px 0 110px; color: #fff; background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/sonagra-corporate-consultation-sunrise.png') center/cover; }
+.about-page-hero { padding: 105px 0 110px; color: #fff; background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/sonagra-corporate-consultation-sunrise.webp') center/cover; }
 .about-page-hero h1 { max-width: 760px; margin: 0 0 20px; font: 500 clamp(2.5rem, 5vw, 4.6rem)/1.08 'Playfair Display', serif; }
 .about-page-hero p { margin: 0; color: #dce4f0; font-size: 1.05rem; }
 .about-image-frame { height: 455px; overflow: hidden; border: 7px solid #fff; box-shadow: 0 18px 45px rgba(11, 30, 59, .14); }
@@ -103,7 +102,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .about-services-band { color: #fff; background: var(--navy); }
 .about-services-band h2 { margin: 0 0 10px; font: 500 clamp(1.8rem, 3vw, 2.7rem)/1.2 'Playfair Display', serif; }
 .about-services-band p { max-width: 680px; margin: 0; color: #b9c7da; }
-.sectors-page-hero { padding: 105px 0 110px; color: #fff; background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/sonagra-corporate-business-advisory.png') center/cover; }
+.sectors-page-hero { padding: 105px 0 110px; color: #fff; background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/sonagra-corporate-business-advisory.webp') center/cover; }
 .sectors-page-hero h1 { margin: 0 0 14px; font: 500 clamp(2.8rem, 5vw, 4.8rem)/1.08 'Playfair Display', serif; }
 .sectors-page-hero p { margin: 0; color: #dce4f0; font-size: 1.05rem; }
 .sectors-intro { background: #fff; }
@@ -118,7 +117,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .sectors-cta { color: #fff; background: var(--navy); }
 .sectors-cta h2 { margin: 0 0 10px; font: 500 clamp(1.8rem, 3vw, 2.7rem)/1.2 'Playfair Display', serif; }
 .sectors-cta p { margin: 0; color: #b9c7da; }
-.careers-page-hero { padding: 105px 0 110px; color: #fff; background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/sonagra-compliance-team.png') center/cover; }
+.careers-page-hero { padding: 105px 0 110px; color: #fff; background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/sonagra-compliance-team.webp') center/cover; }
 .careers-page-hero h1 { margin: 0 0 14px; font: 500 clamp(2.8rem, 5vw, 4.8rem)/1.08 'Playfair Display', serif; }
 .careers-page-hero p { max-width: 650px; margin: 0; color: #dce4f0; font-size: 1.05rem; }
 .careers-intro p { color: var(--muted); }
@@ -138,8 +137,8 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .careers-cta { color: #fff; background: var(--navy); }
 .careers-cta h2 { margin: 0 0 10px; font: 500 clamp(1.8rem, 3vw, 2.7rem)/1.2 'Playfair Display', serif; }
 .careers-cta p { margin: 0; color: #b9c7da; }
-.service-detail-hero { padding: 105px 0 110px; color: #fff; background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/Corporate_Law_and_Advisory.png') center/cover; }
-.governance-hero { background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/pexels-kindelmedia-7688173.jpg.png') center/cover; }
+.service-detail-hero { padding: 105px 0 110px; color: #fff; background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/corporate-law-and-advisory.webp') center/cover; }
+.governance-hero { background: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/pexels-kindelmedia-7688173.webp') center/cover; }
 .service-detail-hero h1 { margin: 0 0 18px; font: 500 clamp(2.6rem, 5vw, 4.7rem)/1.08 'Playfair Display', serif; }
 .service-detail-hero p { max-width: 650px; margin: 0; color: #dce4f0; font-size: 1.05rem; }
 .service-detail-section p { color: var(--muted); }
@@ -207,7 +206,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .service-detail-cta { color: #fff; background: var(--navy); }
 .service-detail-cta h2 { margin: 0 0 10px; font: 500 clamp(1.8rem, 3vw, 2.7rem)/1.2 'Playfair Display', serif; }
 .service-detail-cta p { margin: 0; color: #b9c7da; }
-.formation-hero { min-height: 470px; display: flex; align-items: center; color: #fff; background: linear-gradient(90deg, rgba(5, 18, 37, .40), rgba(5, 18, 37, .22)), url('../images/sonagra-company-formation-advisory.png') center/cover; }
+.formation-hero { min-height: 470px; display: flex; align-items: center; color: #fff; background: linear-gradient(90deg, rgba(5, 18, 37, .40), rgba(5, 18, 37, .22)), url('../images/sonagra-company-formation-advisory.webp') center/cover; }
 .formation-hero-content { max-width: 760px; padding: 95px 0; }
 .formation-hero h1 { max-width: 760px; margin: 14px 0 20px; font: 500 clamp(2.7rem, 5vw, 5rem)/1.05 'Playfair Display', serif; }
 .formation-hero p { max-width: 650px; margin: 0; color: #dce4f0; font-size: 1.08rem; line-height: 1.8; }
@@ -310,7 +309,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .fema-reference-item p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.75; }
 .fema-reference-sidebar { position: sticky; top: 30px; }
 .fema-reference-sidebar a.active { color: var(--gold); }
-.fema-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/FEMA_Matters.png'); }
+.fema-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/fema-matters.webp'); }
 .trademark-reference { background: #fff; }
 .trademark-reference main > p { color: var(--muted); font-size: .94rem; line-height: 1.85; }
 .trademark-reference main > .lead-copy { color: var(--navy); font-size: 1.08rem; line-height: 1.75; }
@@ -320,7 +319,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .trademark-reference-item p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.75; }
 .trademark-reference-sidebar { position: sticky; top: 30px; }
 .trademark-reference-sidebar a.active { color: var(--gold); }
-.trademark-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/Intellectual_Property_Rights_Trademark.png'); }
+.trademark-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/intellectual-property-rights-trademark.webp'); }
 .amalgamation-reference { background: #fff; }
 .amalgamation-reference main > p { color: var(--muted); font-size: .94rem; line-height: 1.85; }
 .amalgamation-reference main > .lead-copy { color: var(--navy); font-size: 1.08rem; line-height: 1.75; }
@@ -330,7 +329,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .amalgamation-reference-item p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.75; }
 .amalgamation-reference-sidebar { position: sticky; top: 30px; }
 .amalgamation-reference-sidebar a.active { color: var(--gold); }
-.amalgamation-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/Amalgamation.png'); }
+.amalgamation-hero { background-image: linear-gradient(115deg, rgba(7, 21, 43, .38), rgba(11, 30, 59, .30)), url('../images/amalgamation.webp'); }
 .company-law-intro { max-width: 980px; margin: 0 auto 34px; }
 .company-law-feature-image { display: grid; grid-template-columns: 1.15fr .85fr; align-items: stretch; margin: 0 auto 72px; background: var(--paper); }
 .company-law-feature-image img { width: 100%; height: 335px; object-fit: cover; }
@@ -431,7 +430,7 @@ a { color: inherit; text-decoration: none; transition: color .2s ease, backgroun
 .reference-clients-points li { position: relative; margin-bottom: 10px; padding-left: 34px; font-size: 1rem; line-height: 1.45; }
 .reference-clients-points li::before { content: "✓"; position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border: 2px solid rgba(255,255,255,.92); border-radius: 50%; color: #fff; font-size: .8rem; font-weight: 700; text-align: center; line-height: 18px; }
 .reference-call-now { padding-top: 0; }
-.reference-call-now-inner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 320px; max-width: 100%; margin: 0 auto; padding: 42px 6%; color: #fff; background: linear-gradient(90deg, rgba(7, 21, 43, .78), rgba(7, 21, 43, .48)), url('../images/sonagra-compliance-team.png') center/cover; overflow: hidden; }
+.reference-call-now-inner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 320px; max-width: 100%; margin: 0 auto; padding: 42px 6%; color: #fff; background: linear-gradient(90deg, rgba(7, 21, 43, .78), rgba(7, 21, 43, .48)), url('../images/sonagra-compliance-team.webp') center/cover; overflow: hidden; }
 .reference-call-now-copy h2 { margin: 0; font: 600 clamp(2.1rem, 4vw, 3.5rem)/1.1 'DM Sans', sans-serif; }
 .reference-call-now-action { text-align: center; }
 .reference-call-now-icon { width: 92px; height: 92px; margin: 0 auto 14px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: #fff; color: #1a73be; font-size: 2.1rem; }
@@ -1512,4 +1511,24 @@ main .cg-page.blog-detail > section.reference-why.section-space { padding-top: 2
   main > .service-detail-hero + .reference-services .reference-service-card > img { margin-bottom: 20px; }
   main > .service-detail-hero + .reference-services .reference-service-card h3 { flex: 1 1 auto; min-height: 0; margin-bottom: 18px; }
   main > .service-detail-hero + .reference-services .reference-service-card a { align-self: flex-start; }
+}
+
+/* Home page, first image + text section (desktop only): tighter spacing between the heading, paragraphs and list */
+@media (min-width: 992px) {
+  main > #home ~ .reference-intro-lead .section-title { margin-bottom: 10px; }
+  main > #home ~ .reference-intro-lead p { margin-bottom: 8px; line-height: 1.6; }
+  main > #home ~ .reference-intro-lead .reference-intro-points { margin-top: 4px; margin-bottom: 14px; }
+  main > #home ~ .reference-intro-lead .reference-intro-points li { margin-bottom: 4px; line-height: 1.55; }
+}
+
+/* Home page (desktop only): no wide gaps between words in the first text block; Why Choose card text same size as the other home text */
+@media (min-width: 992px) {
+  main > #home ~ .reference-why .reference-feature p { font-size: 1rem; line-height: 1.7; }
+  main > #home ~ .reference-why .reference-feature h3 { font-size: 1.25rem; }
+}
+
+/* Formation page "Why Choose" section: same card text sizes as the home page Why Choose section (desktop) */
+@media (min-width: 992px) {
+  main > .formation-why .reference-feature p { font-size: 1rem; line-height: 1.7; }
+  main > .formation-why .reference-feature h3 { font-size: 1.25rem; }
 }

@@ -19,7 +19,7 @@
         var pageKeywords = (ViewData["SeoKeywords"] as string) ?? seoEntry?.Keywords ?? "company secretary in Morbi, ROC filing Gujarat, company registration Morbi, corporate governance";
         var canonicalUrl = baseUrl + (seoPath == "/" ? "/" : (seoPath == "/home/blogs" ? "/blogs" : seoPath));
         var ogType = (ViewData["OgType"] as string) ?? "website";
-        var ogImage = baseUrl + ((ViewData["OgImage"] as string) ?? "/images/sonagra-office-meeting.png");
+        var ogImage = baseUrl + ((ViewData["OgImage"] as string) ?? "/images/sonagra-office-meeting.webp");
         string LdTag(string json) => "<script type=\"application/ld+json\">" + json + "</script>";
         var pageName = (ViewData["SeoTitle"] as string) ?? seoEntry?.ServiceName ?? seoEntry?.Title ?? (ViewData["Title"] as string) ?? "";
     }
@@ -45,10 +45,13 @@
     <meta name="twitter:title" content="@pageTitle" />
     <meta name="twitter:description" content="@pageDescription" />
     <meta name="twitter:image" content="@ogImage" />
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="~/images/TitleLogo.jpeg" />
-    <link rel="icon" type="image/jpeg" sizes="192x192" href="~/images/TitleLogo.jpeg" />
-    <link rel="shortcut icon" type="image/jpeg" href="~/images/TitleLogo.jpeg" />
-    <link rel="apple-touch-icon" href="~/images/TitleLogo.jpeg" />
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="~/images/title-logo.jpeg" />
+    <link rel="icon" type="image/jpeg" sizes="192x192" href="~/images/title-logo.jpeg" />
+    <link rel="shortcut icon" type="image/jpeg" href="~/images/title-logo.jpeg" />
+    <link rel="apple-touch-icon" href="~/images/title-logo.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SonagraCompany.styles.css" asp-append-version="true" />
