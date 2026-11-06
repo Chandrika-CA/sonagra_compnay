@@ -16,7 +16,7 @@ namespace SonagraCompany.Services
                 "Private Limited Company Registration in Gujarat: Step-by-Step Guide",
                 "How to register a private limited company in Gujarat: eligibility, documents, SPICe+ filing, MOA and AOA, and what to do after incorporation.",
                 "private limited company registration in Gujarat, company registration in Morbi, how to register a company, documents for company registration, SPICe+, MOA AOA, company incorporation India",
-                "Company Registration", Published, 5, "sonagra-company-formation-advisory.png",
+                "Company Registration", Published, 5, "Private Limited Company Registration in Gujarat.png",
                 """
                 <p>A private limited company is the most popular structure for founders who want limited liability, a separate legal identity and an easy path to raising investment. This guide explains how company registration works for businesses in Morbi and the rest of Gujarat.</p>
 
@@ -62,7 +62,7 @@ namespace SonagraCompany.Services
                 "Annual ROC Compliance Checklist for Private Limited Companies",
                 "A practical checklist of yearly ROC and Companies Act compliances: board meetings, AGM, financial statements, annual return, DIR-3 KYC and more.",
                 "annual ROC compliance, ROC filing checklist, private limited company compliance, MGT-7 AOC-4, AGM compliance, DIR-3 KYC, company annual filing Gujarat, ROC compliance Morbi",
-                "ROC Compliance", Published, 5, "sonagra-compliance-team.png",
+                "ROC Compliance", Published, 5, "Annual ROC Compliance Checklist for Private Limited Companies.png",
                 """
                 <p>Registering a company is only the beginning. Every company in India has to meet yearly compliance requirements under the Companies Act, 2013. Missing them leads to additional fees, penalties and, in serious cases, disqualification of directors. Here is a practical checklist.</p>
 
@@ -104,7 +104,7 @@ namespace SonagraCompany.Services
                 "LLP vs Private Limited Company: Which Is Better for Your Business?",
                 "Compare an LLP and a private limited company on liability, compliance, funding, audit and ownership to choose the right structure for your business.",
                 "LLP vs private limited company, LLP registration Gujarat, which is better LLP or pvt ltd, difference between LLP and company, business structure India, LLP compliance",
-                "Company Registration", Published, 4, "sonagra-office-meeting.png",
+                "Company Registration", Published, 4, "Which Is Better for Your Business.png",
                 """
                 <p>Choosing between a Limited Liability Partnership (LLP) and a private limited company is one of the first decisions for a new business. Both give limited liability, but they differ in compliance, funding and flexibility.</p>
 
@@ -137,7 +137,7 @@ namespace SonagraCompany.Services
                 "What Does a Company Secretary Do and When Does Your Business Need One?",
                 "Understand the role of a company secretary: compliance, board meetings, ROC filings, governance and SEBI rules, and when you should appoint one.",
                 "what does a company secretary do, company secretary role, CS in India, company secretary services, when to hire a company secretary, practising company secretary Gujarat",
-                "Company Secretary", Published, 4, "sonagra-corporate-business-advisory.png",
+                "Company Secretary", Published, 4, "What Does a Company Secretary Do and When Does Your Business Need One.png",
                 """
                 <p>A company secretary (CS) is a professional who makes sure a company follows the corporate laws that apply to it. For many founders the CS is the person who keeps the company compliant, the board organised and the records clean.</p>
 
@@ -178,7 +178,7 @@ namespace SonagraCompany.Services
                 "Corporate Governance for Growing Companies: Why It Matters",
                 "Why corporate governance matters for growing and listed companies: board structure, committees, policies, disclosures and regular compliance reviews.",
                 "corporate governance for growing companies, corporate governance in India, board of directors, governance policies, whistleblower policy, related party transactions, governance compliance Gujarat",
-                "Corporate Governance", Published, 4, "sonagra-office-meeting.png",
+                "Corporate Governance", Published, 4, "Corporate Governance for Growing Companies.png",
                 """
                 <p>Corporate governance is the system by which a company is directed and controlled. Good governance builds trust with investors, banks, employees and regulators and helps a business grow without avoidable legal or reputational problems.</p>
 
@@ -209,7 +209,7 @@ namespace SonagraCompany.Services
                 "FEMA and FDI Compliance for Foreign Investment in India",
                 "A simple guide to FEMA and FDI compliance: investment routes, reporting to RBI through the authorised dealer bank, annual returns and common mistakes.",
                 "FEMA compliance, FDI compliance India, foreign investment in India, FEMA consultant, RBI reporting, annual FLA return, overseas investment, foreign company in India",
-                "FEMA & FDI", Published, 4, "sonagra-corporate-consultation-sunrise.png",
+                "FEMA & FDI", Published, 4, "FEMA and FDI Compliance for Foreign Investment in India.png",
                 """
                 <p>The Foreign Exchange Management Act, 1999 (FEMA) regulates foreign exchange transactions and foreign investment in India. Indian companies that receive foreign investment, or invest abroad, have to follow FEMA rules and report certain transactions to the Reserve Bank of India (RBI).</p>
 

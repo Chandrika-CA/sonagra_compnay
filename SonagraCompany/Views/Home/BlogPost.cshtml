@@ -6,7 +6,7 @@
     ViewData["SeoKeywords"] = Model.Keywords;
     ViewData["OgType"] = "article";
     ViewData["DatePublished"] = Model.Published.ToString("yyyy-MM-dd");
-    ViewData["OgImage"] = "/images/" + Model.ImageFile;
+    ViewData["OgImage"] = "/images/" + Uri.EscapeDataString(Model.ImageFile);
 }
 
 <section class="service-detail-hero">
@@ -17,27 +17,54 @@
     </div>
 </section>
 
-<section class="section-space blog-post-section">
-    <div class="container site-container">
-        <div class="row gy-5 gx-lg-5">
-            <article class="col-lg-8 blog-post-content">
-                <img class="blog-post-image" src="~/images/@Model.ImageFile" alt="@Model.Title" />
-                @Html.Raw(Model.ContentHtml)
-                <div class="blog-post-back"><a class="text-link" href="/blogs">← All articles</a></div>
-            </article>
-            <aside class="col-lg-4">
-                <div class="service-detail-sidebar">
-                    <h2>Related Services</h2>
-                    @foreach (var service in Model.RelatedServices)
-                    {
-                        <a href="@service.Path">@service.Name <span>↗</span></a>
-                    }
-                    <a href="/our-services">All Services <span>↗</span></a>
+@{
+    var parts = System.Text.RegularExpressions.Regex.Split(Model.ContentHtml, "(?=<h2>)")
+        .Where(p => !string.IsNullOrWhiteSpace(p)).ToList();
+    var intro = parts.Count > 0 && !parts[0].TrimStart().StartsWith("<h2>") ? parts[0] : string.Empty;
+    var ulChecks = "<ul class='cg-checks'>";
+    var sections = parts.Where(p => p.TrimStart().StartsWith("<h2>")).ToList();
+}
+
+<div class="cg-page nclt-page blog-detail">
+    <section class="reference-intro blog-row section-space">
+        <div class="container site-container">
+            <div class="row align-items-center gy-5 gx-lg-5">
+                <div class="col-lg-6 scroll-reveal reveal-left">
+                    @Html.Raw(intro.Replace("<ul>", ulChecks))
                 </div>
-            </aside>
+                <div class="col-lg-6 scroll-reveal reveal-right"><div class="reference-image-frame"><img src="~/images/@Uri.EscapeDataString(Model.ImageFile)" alt="@Model.Title" loading="lazy" /></div></div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+    @for (var i = 0; i < sections.Count; i++)
+    {
+        var match = System.Text.RegularExpressions.Regex.Match(sections[i], @"^\s*<h2>(.*?)</h2>(.*)$", System.Text.RegularExpressions.RegexOptions.Singleline);
+        var heading = match.Groups[1].Value;
+        var body = match.Groups[2].Value.Replace("<ul>", ulChecks);
+        var sectionClass = "reference-intro section-space" + (i % 2 == 0 ? " section-paper" : "");
+        <section class="@sectionClass">
+            <div class="container site-container">
+                <div class="scroll-reveal reveal-up">
+                    <h2 class="section-title">@Html.Raw(heading)</h2>
+                    @Html.Raw(body)
+                </div>
+            </div>
+        </section>
+    }
+    <section class="reference-why section-space@(sections.Count % 2 == 0 ? " section-paper" : "")">
+        <div class="container site-container">
+            <div class="text-center reference-heading scroll-reveal reveal-up"><span class="eyebrow eyebrow-dark">Explore more</span><h2 class="section-title">Related Services</h2></div>
+            <div class="nclt-service-links scroll-reveal reveal-up">
+                @foreach (var service in Model.RelatedServices)
+                {
+                    <a href="@service.Path">@service.Name <span>↗</span></a>
+                }
+                <a href="/our-services">All Services <span>↗</span></a>
+                <a href="/blogs">← All articles</a>
+            </div>
+        </div>
+    </section>
+</div>
 
 <section class="reference-cta section-space-sm">
     <div class="container site-container">

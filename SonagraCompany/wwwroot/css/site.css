@@ -1467,3 +1467,49 @@ main section:not([class*="hero"]) .reference-intro-points li { text-align: left;
   .cert-page .reference-intro .section-title { margin-bottom: 12px; }
   .cert-page .nclt-service-links { margin-top: 18px; }
 }
+
+/* Blogs page: titles inside the alternating image / text rows */
+main > .reference-intro .section-title a { color: inherit; }
+main > .reference-intro .section-title a:hover { color: var(--gold); }
+main > .reference-intro .blog-card-meta { margin: 4px 0 18px; }
+
+/* Blogs page: show each blog image in full (frame follows the image's own proportions, no cropping) */
+main > .reference-intro.blog-row .reference-image-frame { height: auto; }
+main > .reference-intro.blog-row .reference-image-frame img { height: auto; object-fit: contain; }
+
+/* Blog detail pages: same section format as the services pages */
+.blog-detail .blog-row p:first-child { color: var(--navy); font-size: 1.12rem; line-height: 1.75; }
+.blog-detail ol { padding-left: 1.25rem; color: var(--muted); }
+.blog-detail ol li { margin-bottom: 8px; line-height: 1.85; }
+.blog-detail .cg-checks { margin-top: 18px; }
+
+/* Blog detail pages: tighter spacing between and inside sections (desktop and mobile) */
+main .cg-page.blog-detail > section.reference-intro.section-space,
+main .cg-page.blog-detail > section.reference-why.section-space { padding-top: 28px; padding-bottom: 28px; }
+.blog-detail .section-title { margin: 0 0 10px; }
+.blog-detail .reference-intro p, .blog-detail .reference-intro ol { margin-bottom: 10px; }
+.blog-detail .reference-intro .reveal-up > :last-child, .blog-detail .reference-intro .col-lg-6 > :last-child { margin-bottom: 0; }
+.blog-detail .cg-checks { margin-top: 12px; gap: 8px 40px; }
+.blog-detail .reference-heading { margin-bottom: 0; }
+.blog-detail .nclt-service-links { margin-top: 14px; }
+@media (min-width: 992px) {
+  .blog-detail .reference-image-frame { border-width: 6px; }
+}
+@media (max-width: 991px) {
+  main .cg-page.blog-detail > section.reference-intro.section-space,
+  main .cg-page.blog-detail > section.reference-why.section-space { padding-top: 22px; padding-bottom: 22px; }
+  .blog-detail .row { --bs-gutter-y: 1.25rem; }
+}
+
+/* Team page: spacing between paragraphs of a profile */
+.team-row-text p + p { margin-top: 12px; }
+
+/* Our Services page (desktop only): less empty space around and inside the service cards */
+@media (min-width: 992px) {
+  main > .service-detail-hero + .reference-services.section-space { padding-top: 40px; padding-bottom: 40px; }
+  main > .service-detail-hero + .reference-services .row { --bs-gutter-y: 1.25rem; }
+  main > .service-detail-hero + .reference-services .reference-service-card { display: flex; flex-direction: column; min-height: 0; padding: 28px 36px 24px; }
+  main > .service-detail-hero + .reference-services .reference-service-card > img { margin-bottom: 20px; }
+  main > .service-detail-hero + .reference-services .reference-service-card h3 { flex: 1 1 auto; min-height: 0; margin-bottom: 18px; }
+  main > .service-detail-hero + .reference-services .reference-service-card a { align-self: flex-start; }
+}

@@ -297,3 +297,47 @@ document.addEventListener('DOMContentLoaded', () => {
         bootstrap.Modal.getOrCreateInstance(element).show();
     }
 });
+
+// Home page URL stays "/" : the Home and Services menu links scroll to their section without adding #home / #services to the address bar
+(() => {
+    const cleanUrl = () => history.replaceState(null, '', window.location.pathname + window.location.search);
+    const targetFor = (hash) => (hash === '#home' ? document.documentElement : document.querySelector(hash));
+    const isHomePath = () => window.location.pathname === '/' || window.location.pathname === '';
+
+    document.addEventListener('click', (event) => {
+        const link = event.target.closest && event.target.closest('a[href="/#home"], a[href="/#services"]');
+        if (!link || event.defaultPrevented || !isHomePath() || event.ctrlKey || event.metaKey || event.shiftKey) {
+            return;
+        }
+
+        const hash = link.getAttribute('href').slice(1);
+        const target = targetFor(hash);
+        if (!target) {
+            return;
+        }
+
+        event.preventDefault();
+        if (hash === '#home') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        cleanUrl();
+    });
+
+    // Arriving from another page via /#services (or an old /#home link): scroll there, then drop the hash
+    window.addEventListener('load', () => {
+        const hash = window.location.hash;
+        if (isHomePath() && (hash === '#home' || hash === '#services')) {
+            setTimeout(() => {
+                const target = targetFor(hash);
+                if (target && hash === '#services') {
+                    target.scrollIntoView({ block: 'start' });
+                }
+
+                cleanUrl();
+            }, 50);
+        }
+    });
+})();
